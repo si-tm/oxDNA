@@ -20,6 +20,7 @@ def make_random_seq(len):
     for i in range(len):
         tmp = random.random()*4
         seq += amide[int(tmp)]
+    seq += '\n'
     return seq
 
 def main():
@@ -28,9 +29,10 @@ def main():
     print(path)
     f = make_file(path)
     # ランダムな文字列の生成
-    sequence = make_random_seq(10)
     # ファイルに書き込む
-    f.write(sequence)
+    for i in range(5):
+        sequence = make_random_seq(10)
+        f.write(sequence)
     f.close()
 
 if __name__ == '__main__':
