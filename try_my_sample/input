@@ -27,8 +27,8 @@ verlet_skin = 0.5
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = ../utils/testcase/generated_2022-10-11-101634.top
-conf_file = ../utils/testcase/generated_2022-10-11-101634.conf
+topology = TOP
+conf_file = CONF
 lastconf_file = last_conf.dat
 trajectory_file = trajectory.dat
 refresh_vel = 1
