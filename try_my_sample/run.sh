@@ -8,8 +8,10 @@ OXDNA_BIN=$CODEDIR/build/bin/oxDNA
 echo "make input files"
 TOPFILE=`find ../utils/testcase/ -name \*.top`
 CONFFILE=`find ../utils/testcase/ -name \*.conf`
+SEQFILE=`find ../utils/seq/ -name \*.dat`
 echo $TOPFILE
 echo $CONFFILE
+echo $SEQFILE
 
 # make input file
 sed -i -e "s|TOP|$TOPFILE|" input
@@ -40,9 +42,17 @@ fi
 echo "move input and output files to results directory"
 
 cd ..
-mkdir results/
+if [ -e {results/} ]; then
+    # 存在する場合
+    echo "results directory exit"
+else
+    # 存在しない場合
+    mkdir results/
+fi
 cd try_my_sample/
 mv -f *.dat ../results/
 
+mv -f "$SEQFILE" ../results/
 mv -f "$TOPFILE" ../results/
 mv -f "$CONFFILE" ../results/
+
