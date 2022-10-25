@@ -4,10 +4,10 @@ import random
 import sys
 # ランダムな長さ10のsequenceを作る
 
-def make_filename():
-    now = datetime.now()
-    date_time_str = now.strftime("%Y-%m-%d-%H%M%S")
-    path = f'seq/seq_{date_time_str}.dat'
+def make_filename(date_time_str):
+    # now = datetime.now()
+    # date_time_str = now.strftime("%Y-%m-%d-%H%M%S")
+    path = f'../utils/seq/seq_{date_time_str}.dat'
     return path
 
 def make_file(path):
@@ -24,8 +24,9 @@ def make_random_seq(len):
     return seq
 
 def main():
+    args = sys.argv
     # ファイルを作成
-    path = make_filename()
+    path = make_filename(args[1])
     print(path)
     f = make_file(path)
     # ランダムな文字列の生成
@@ -36,5 +37,4 @@ def main():
     f.close()
 
 if __name__ == '__main__':
-    # print(sys.argv[1])
     main()
