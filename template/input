@@ -9,7 +9,7 @@ seed = 42
 ####    SIM PARAMETERS    ####
 ##############################
 ; steps = 10
-steps = 20000
+steps = 2000000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
