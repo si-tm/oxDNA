@@ -9,7 +9,8 @@ seed = 42
 ##############################
 ####    SIM PARAMETERS    ####
 ##############################
-steps = 100000000
+; steps = 100000000
+steps = 10
 
 list_type = cells
 ensemble = nvt
@@ -23,8 +24,8 @@ verlet_skin = 0.5
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = initial.top
-conf_file = initial.conf
+topology = TOP
+conf_file = CONF
 lastconf_file = last_conf_trap.dat
 trajectory_file = trajectory_trap.dat
 refresh_vel = 1
@@ -36,7 +37,7 @@ print_conf_interval = 100000000
 print_energy_every = 100000
 time_scale = linear
 external_forces = 1
-external_forces_file = hairpin_forces.dat
+external_forces_file = FORCE
 
 data_output_1 = {
 	print_every = 10000

@@ -21,16 +21,17 @@ python3 ../utils/generate-sa.py 10 $FILENAME $now
 INPUTFILE="../try_my_sample/input_${now}"
 SEQDEPFILE="../try_my_sample/input_seq_dep_${now}"
 TRAPFILE="../try_my_sample/input_trap_${now}"
+FORCESFILE="../utils/forces_${now}.dat"
+
+echo $FORCESFILE
 
 cp ../template/input $INPUTFILE
 cp ../template/input_seq_dep $SEQDEPFILE
 cp ../template/input_trap $TRAPFILE
+cp ../template/forces.dat $FORCESFILE
 
 # inputファイル書き換え
 
-sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
-sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
-sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
 
 TOPFILE="../utils/testcase/generated_${now}.top"
 CONFFILE="../utils/testcase/generated_${now}.conf"
@@ -38,6 +39,20 @@ SEQFILE="../utils/seq/seq_${now}.dat"
 
 sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
 sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
+sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
+
+# input_seq_depファイル書き換え
+
+sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
+sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
+sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
+
+# input_trapファイル書き換え
+
+sed -i -e "s|TOP|$TOPFILE|" $TRAPFILE
+sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
+sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
+sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
 
 # 実行
 OXDNA_BIN=../build/bin/oxDNA
