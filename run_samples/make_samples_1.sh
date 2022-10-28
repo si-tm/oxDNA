@@ -61,12 +61,15 @@ if [ -e $OXDNA_BIN ]
 then
     # run the samples
     echo "Starting VMMC simulation with the sequence-averaged version of the model"
+    echo $INPUTFILE
     $OXDNA_BIN $INPUTFILE
     
     echo "Starting VMMC simulation with the sequence-dependent version of the model"
+    echo $SEQDEPFILE
     $OXDNA_BIN $SEQDEPFILE
 
     echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
+    echo $TRAPFILE
     $OXDNA_BIN $TRAPFILE
 else
     echo "Can't find $OXDNA_BIN, did you compile oxDNA?"
