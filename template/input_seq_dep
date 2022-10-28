@@ -9,7 +9,8 @@ seed = 42
 ##############################
 ####    SIM PARAMETERS    ####
 ##############################
-steps = 100000000
+; steps = 100000000
+steps = 10
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -30,8 +31,8 @@ verlet_skin = 0.5
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = initial.top
-conf_file = initial.conf
+topology = TOP
+conf_file = CONF
 lastconf_file = last_conf_seq_dep.dat
 trajectory_file = trajectory_seq_dep.dat
 refresh_vel = 1
