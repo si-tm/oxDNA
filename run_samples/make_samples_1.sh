@@ -21,7 +21,8 @@ python3 ../utils/generate-sa.py 10 $FILENAME $now
 INPUTFILE="../try_my_sample/input_${now}"
 SEQDEPFILE="../try_my_sample/input_seq_dep_${now}"
 TRAPFILE="../try_my_sample/input_trap_${now}"
-FORCESFILE="../utils/forces_${now}.dat"
+# FORCESFILE="../utils/forces_${now}.dat"
+FORCESFILE="../try_my_sample/forces_${now}.dat"
 
 echo $FORCESFILE
 
