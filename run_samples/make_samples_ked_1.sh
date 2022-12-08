@@ -4,7 +4,6 @@
 
 # ファイル名の取得
 # .datを除く
-${#now}
 now=$1
 echo ${now}
 now=${now:0:${#now}-4}
