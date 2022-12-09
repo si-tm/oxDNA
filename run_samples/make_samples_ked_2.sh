@@ -22,25 +22,25 @@ BOX_SIZE=100
 python3 ../utils/generate-sa-original.py $BOX_SIZE $SEQ
 
 # # テンプレートの用意
-INPUTFILE="input_${now}"
-SEQDEPFILE="input_seq_dep_${now}"
-TRAPFILE="input_trap_${now}"
-FORCESFILE="forces_${now}.dat"
+# INPUTFILE="input_${now}"
+# SEQDEPFILE="input_seq_dep_${now}"
+# TRAPFILE="input_trap_${now}"
+# FORCESFILE="forces_${now}.dat"
 
 # # # echo $FORCESFILE
 
-cp ../template/input $INPUTFILE
-cp ../template/input_seq_dep $SEQDEPFILE
-cp ../template/input_trap $TRAPFILE
-cp ../template/forces.dat $FORCESFILE
+# cp ../template/input $INPUTFILE
+# cp ../template/input_seq_dep $SEQDEPFILE
+# cp ../template/input_trap $TRAPFILE
+# cp ../template/forces.dat $FORCESFILE
 
 # # # inputファイル書き換え
 
-TOPFILE="generated_${now}.top"
-CONFFILE="generated_${now}.dat"
-mv generated.top $TOPFILE
-mv generated.dat $CONFFILE
-SEQFILE=$1
+# TOPFILE="generated_${now}.top"
+# CONFFILE="generated_${now}.dat"
+# mv generated.top $TOPFILE
+# mv generated.dat $CONFFILE
+# SEQFILE=$1
 
 #### ここから ####
 # sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
