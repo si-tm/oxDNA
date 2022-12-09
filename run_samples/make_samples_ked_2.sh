@@ -10,8 +10,9 @@ echo ${now}
 
 # 入力ファイルの作成
 # seqファイルの用意
-SEQ="try_my_sample/"+$1
+SEQ=$1
 SEQ_FROM="try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
+SEQ="try_my_sample/$SEQ"
 # # seqファイルをtry_my_sampleへ移動する
 cp $SEQ_FROM $SEQ 
 # make top and conf file
@@ -34,8 +35,8 @@ cp template/forces.dat $FORCESFILE
 
 TOPFILE="try_my_sample/generated_${now}.top"
 CONFFILE="try_my_sample/generated_${now}.dat"
-mv try_my_sample/generated.top $TOPFILE
-mv try_my_sample/generated.dat $CONFFILE
+mv generated.top $TOPFILE
+mv generated.dat $CONFFILE
 SEQFILE=$1
 
 echo `expr ls try_my_sample/`
