@@ -13,7 +13,7 @@ echo ${now}
 SEQ=$1
 SEQ_FROM="try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
 SEQ="try_my_sample/$SEQ"
-# # seqファイルをtry_my_sampleへ移動する
+# seqファイルをtry_my_sampleへ移動する
 cp $SEQ_FROM $SEQ 
 # make top and conf file
 echo $SEQ
@@ -39,6 +39,7 @@ mv generated.top $TOPFILE
 mv generated.dat $CONFFILE
 SEQFILE=$1
 
+echo `expr ls`
 echo `expr ls try_my_sample/`
 
 # sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
