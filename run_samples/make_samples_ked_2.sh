@@ -10,39 +10,35 @@ echo ${now}
 
 # 入力ファイルの作成
 # seqファイルの用意
-SEQ=$1
+SEQ="try_my_sample/"+$1
 SEQ_FROM="try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
-echo $SEQ_FROM
 # # seqファイルをtry_my_sampleへ移動する
 cp $SEQ_FROM $SEQ 
-make top and conf file
+# make top and conf file
 echo $SEQ
 BOX_SIZE=100
 python3 utils/generate-sa-original.py $BOX_SIZE $SEQ
 
-# # テンプレートの用意
-INPUTFILE="input_${now}"
-SEQDEPFILE="input_seq_dep_${now}"
-TRAPFILE="input_trap_${now}"
-FORCESFILE="forces_${now}.dat"
-
-#### ここから ####
-
-# # # echo $FORCESFILE
+# テンプレートの用意
+INPUTFILE="try_my_sample/input_${now}"
+SEQDEPFILE="try_my_sample/input_seq_dep_${now}"
+TRAPFILE="try_my_sample/input_trap_${now}"
+FORCESFILE="try_my_sample/forces_${now}.dat"
 
 cp template/input $INPUTFILE
 cp template/input_seq_dep $SEQDEPFILE
 cp template/input_trap $TRAPFILE
 cp template/forces.dat $FORCESFILE
 
-# # # inputファイル書き換え
+# inputファイル書き換え
 
-TOPFILE="generated_${now}.top"
-CONFFILE="generated_${now}.dat"
+TOPFILE="try_my_sample/generated_${now}.top"
+CONFFILE="try_my_sample/generated_${now}.dat"
 mv try_my_sample/generated.top $TOPFILE
 mv try_my_sample/generated.dat $CONFFILE
 SEQFILE=$1
 
+echo `expr ls try_my_sample/`
 
 # sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
 # sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
