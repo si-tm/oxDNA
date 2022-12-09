@@ -39,28 +39,27 @@ mv generated.top $TOPFILE
 mv generated.dat $CONFFILE
 SEQFILE=$1
 
-echo `expr ls`
-echo `expr ls try_my_sample/`
+#### ここから
 
-# sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
-# sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
-# sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
+sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
+sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
+sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
 
-# input_seq_depファイル書き換え
+input_seq_depファイル書き換え
 
-# sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
-# sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
-# sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
+sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
+sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
+sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
 
 # input_trapファイル書き換え
 
-# sed -i -e "s|TOP|$TOPFILE|" $TRAPFILE
-# sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
-# sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
-# sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
-# sed -i -e "/external_forces/c external_forces = 0|" $TRAPFILE # forceファイルを使わない設定
+sed -i -e "s|TOP|$TOPFILE|" $TRAPFILE
+sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
+sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
+sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
+sed -i -e "/external_forces/c external_forces = 0|" $TRAPFILE # forceファイルを使わない設定
 
-# # # 実行
+# 実行
 # OXDNA_BIN=../build/bin/oxDNA
 
 # if [ -e $OXDNA_BIN ]
