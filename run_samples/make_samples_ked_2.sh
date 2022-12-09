@@ -45,7 +45,7 @@ sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
 sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
 sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
 
-input_seq_depファイル書き換え
+# input_seq_depファイル書き換え
 
 sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
 sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
@@ -60,41 +60,41 @@ sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
 sed -i -e "/external_forces/c external_forces = 0|" $TRAPFILE # forceファイルを使わない設定
 
 # 実行
-# OXDNA_BIN=../build/bin/oxDNA
+OXDNA_BIN=build/bin/oxDNA
 
-# if [ -e $OXDNA_BIN ]
-# then
+if [ -e $OXDNA_BIN ]
+then
     # run the samples
-#     echo "Starting VMMC simulation with the sequence-averaged version of the model"
-#     echo $INPUTFILE
-#     $OXDNA_BIN $INPUTFILE
+    echo "Starting VMMC simulation with the sequence-averaged version of the model"
+    echo $INPUTFILE
+    $OXDNA_BIN $INPUTFILE
     
-#     echo "Starting VMMC simulation with the sequence-dependent version of the model"
-#     echo $SEQDEPFILE
-#     $OXDNA_BIN $SEQDEPFILE
+    echo "Starting VMMC simulation with the sequence-dependent version of the model"
+    echo $SEQDEPFILE
+    $OXDNA_BIN $SEQDEPFILE
 
-#     echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
-#     echo $TRAPFILE
-#     $OXDNA_BIN $TRAPFILE
-# else
-#     echo "Can't find $OXDNA_BIN, did you compile oxDNA?"
-#     exit
+    echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
+    echo $TRAPFILE
+    $OXDNA_BIN $TRAPFILE
+else
+    echo "Can't find $OXDNA_BIN, did you compile oxDNA?"
+    exit
 
-# fi
+fi
 
-# # # ファイルの移動
+# ファイルの移動
 # echo "move input and output files to results directory"
 
-# if [ -e {../results/} ]; then
-#     echo "results directory exit"
-# else
-#     mkdir ../results/
-# fi
+if [ -e {results/} ]; then
+    echo "results directory exit"
+else
+    mkdir results/
+fi
 
-# # cd run_samples/
-# mv -f *.dat ../results/
+# cd run_samples/
+mv -f try_my_samples/*.dat results/
 
-# mv -f "$SEQFILE" ../results/
-# mv -f "$TOPFILE" ../results/
-# mv -f "$CONFFILE" ../results/
+mv -f "$SEQFILE" results/
+mv -f "$TOPFILE" results/
+mv -f "$CONFFILE" results/
 
