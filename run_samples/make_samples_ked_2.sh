@@ -36,11 +36,11 @@ cp ../template/forces.dat $FORCESFILE
 
 # # # inputファイル書き換え
 
-# TOPFILE="generated_${now}.top"
-# CONFFILE="generated_${now}.dat"
-# mv generated.top $TOPFILE
-# mv generated.dat $CONFFILE
-# SEQFILE=$1
+TOPFILE="generated_${now}.top"
+CONFFILE="generated_${now}.dat"
+mv generated.top $TOPFILE
+mv generated.dat $CONFFILE
+SEQFILE=$1
 
 # #### ここから ####
 # sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
