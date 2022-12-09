@@ -4,28 +4,30 @@
 
 # ファイル名の取得
 # .datを除く
-now=$1
-echo ${now}
-now=${now:0:${#now}-4}
-echo ${now}
+# now=$1
+# echo ${now}
+# now=${now:0:${#now}-4}
+# echo ${now}
 
 # 入力ファイルの作成
 # seqファイルの用意
-SEQ=$1
-SEQ_FROM="../try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
-echo $SEQ_FROM
-# seqファイルをtry_my_sampleへ移動する
-cp $SEQ_FROM $SEQ 
+# SEQ=$1
+# SEQ_FROM="../try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
+# echo $SEQ_FROM
+# # seqファイルをtry_my_sampleへ移動する
+# cp $SEQ_FROM $SEQ 
 # make top and conf file
-echo $SEQ
-BOX_SIZE=100
-python3 ../utils/generate-sa-original.py $BOX_SIZE $SEQ
+# echo $SEQ
+# BOX_SIZE=100
+# python3 ../utils/generate-sa-original.py $BOX_SIZE $SEQ
 
 # # テンプレートの用意
 # INPUTFILE="input_${now}"
 # SEQDEPFILE="input_seq_dep_${now}"
 # TRAPFILE="input_trap_${now}"
 # FORCESFILE="forces_${now}.dat"
+
+#### ここから ####
 
 # # # echo $FORCESFILE
 
@@ -42,7 +44,7 @@ python3 ../utils/generate-sa-original.py $BOX_SIZE $SEQ
 # mv generated.dat $CONFFILE
 # SEQFILE=$1
 
-#### ここから ####
+
 # sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
 # sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
 # sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
