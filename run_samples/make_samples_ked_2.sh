@@ -11,7 +11,7 @@ echo ${now}
 # 入力ファイルの作成
 # seqファイルの用意
 SEQ=$1
-SEQ_FROM="../try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
+SEQ_FROM="try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
 echo $SEQ_FROM
 # # seqファイルをtry_my_sampleへ移動する
 cp $SEQ_FROM $SEQ 
