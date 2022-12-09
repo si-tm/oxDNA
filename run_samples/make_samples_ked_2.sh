@@ -62,27 +62,27 @@ sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
 sed -i -e "/external_forces/c external_forces = 0|" $TRAPFILE # forceファイルを使わない設定
 
 # # # 実行
-# OXDNA_BIN=../build/bin/oxDNA
+OXDNA_BIN=../build/bin/oxDNA
 
-# if [ -e $OXDNA_BIN ]
-# then
-#     # run the samples
-#     echo "Starting VMMC simulation with the sequence-averaged version of the model"
-#     echo $INPUTFILE
-#     $OXDNA_BIN $INPUTFILE
+if [ -e $OXDNA_BIN ]
+then
+    # run the samples
+    echo "Starting VMMC simulation with the sequence-averaged version of the model"
+    echo $INPUTFILE
+    $OXDNA_BIN $INPUTFILE
     
-#     echo "Starting VMMC simulation with the sequence-dependent version of the model"
-#     echo $SEQDEPFILE
-#     $OXDNA_BIN $SEQDEPFILE
+    echo "Starting VMMC simulation with the sequence-dependent version of the model"
+    echo $SEQDEPFILE
+    $OXDNA_BIN $SEQDEPFILE
 
-#     echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
-#     echo $TRAPFILE
-#     $OXDNA_BIN $TRAPFILE
-# else
-#     echo "Can't find $OXDNA_BIN, did you compile oxDNA?"
-#     exit
+    echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
+    echo $TRAPFILE
+    $OXDNA_BIN $TRAPFILE
+else
+    echo "Can't find $OXDNA_BIN, did you compile oxDNA?"
+    exit
 
-# fi
+fi
 
 # # # ファイルの移動
 # echo "move input and output files to results directory"
