@@ -5,17 +5,16 @@
 # ファイル名の取得
 # .datを除く
 now=$1
-echo ${now}
 now=${now:0:${#now}-4}
 echo ${now}
 
 # 入力ファイルの作成
 # seqファイルの用意
-# SEQ=$1
-# SEQ_FROM="../try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
-# echo $SEQ_FROM
+SEQ=$1
+SEQ_FROM="../try_KakenhiEvolveDNA/${SEQ:0:4}/$SEQ"
+echo $SEQ_FROM
 # # seqファイルをtry_my_sampleへ移動する
-# cp $SEQ_FROM $SEQ 
+cp $SEQ_FROM $SEQ 
 # make top and conf file
 # echo $SEQ
 # BOX_SIZE=100
