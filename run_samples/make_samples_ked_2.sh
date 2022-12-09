@@ -1,13 +1,13 @@
-#!/bin/bash
+#!usr/bin/bash
 
 # try_my_sample/下で動かす
 
 # ファイル名の取得
 # .datを除く
-# now=$1
-# echo ${now}
-# now=${now:0:${#now}-4}
-# echo ${now}
+now=$1
+echo ${now}
+now=${now:0:${#now}-4}
+echo ${now}
 
 # 入力ファイルの作成
 # seqファイルの用意
