@@ -50,6 +50,7 @@ sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
 sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
 sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
 sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
+sed -i -e "/seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt/c seq_dep_file = oxDNA1_sequence_dependent_parameters.txt" $SEQDEPFILE
 
 # input_trapファイル書き換え
 
@@ -57,7 +58,7 @@ sed -i -e "s|TOP|$TOPFILE|" $TRAPFILE
 sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
 sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
 sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
-sed -i -e "/external_forces/c external_forces = 0|" $TRAPFILE # forceファイルを使わない設定
+sed -i -e "/external_forces = 1/c external_forces = 0" $TRAPFILE # forceファイルを使わない設定
 
 # 実行
 OXDNA_BIN=build/bin/oxDNA
