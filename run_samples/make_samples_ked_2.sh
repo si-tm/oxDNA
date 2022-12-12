@@ -69,7 +69,12 @@ sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
 sed -i -e 's|external_forces = 1|external_forces = 0|' $TRAPFILE # forceファイルを使わない設定
 # sed -i -e 's|steps = 2000000|steps = 10|' $TRAPFILE
 
+echo "tmp2.sh"
 cat tmp2.sh
+echo "input_seq_dep"
+cat $SEQDEPFILE
+echo "input seq_dep"
+cat try_my_sample/input_seq_dep_seqA-GA100000-0.80_final_20200904210434
 ls try_my_sample/
 
 # 実行
