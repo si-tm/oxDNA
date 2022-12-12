@@ -69,6 +69,9 @@ sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
 sed -i -e 's|external_forces = 1|external_forces = 0|' $TRAPFILE # forceファイルを使わない設定
 # sed -i -e 's|steps = 2000000|steps = 10|' $TRAPFILE
 
+ls 
+ls try_my_sample/
+
 # 実行
 OXDNA_BIN=build/bin/oxDNA
 
