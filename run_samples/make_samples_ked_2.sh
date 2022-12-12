@@ -81,6 +81,7 @@ then
     
     echo "Starting VMMC simulation with the sequence-dependent version of the model"
     echo $SEQDEPFILE
+    cat $SEQDEPFILE
     $OXDNA_BIN $SEQDEPFILE
 
     echo "Starting VMMC simulation with the sequence-averaged version of the model and traps acting between nucleotides (see hairpin_forces.dat for details of the traps)"
