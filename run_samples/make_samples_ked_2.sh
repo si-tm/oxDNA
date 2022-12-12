@@ -41,11 +41,16 @@ SEQFILE=$1
 
 #### ここから
 
+echo "$INPUTFILE fixed"
+
 sed -i -e "s|TOP|$TOPFILE|" $INPUTFILE
 sed -i -e "s|.dat|_${now}.dat|" $INPUTFILE
 sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
+sed -i -e "/steps = 2000000/c steps = 10" $INPUTFILE
 
 # input_seq_depファイル書き換え
+
+echo "$SEQDEPFILE fixed"
 
 sed -i -e "s|TOP|$TOPFILE|" $SEQDEPFILE
 sed -i -e "s|.dat|_${now}.dat|" $SEQDEPFILE
@@ -53,6 +58,8 @@ sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
 sed -i -e "/seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt/c seq_dep_file = oxDNA1_sequence_dependent_parameters.txt" $SEQDEPFILE
 
 # input_trapファイル書き換え
+
+echo "$TRAPFILE fixed"
 
 sed -i -e "s|TOP|$TOPFILE|" $TRAPFILE
 sed -i -e "s|.dat|_${now}.dat|" $TRAPFILE
