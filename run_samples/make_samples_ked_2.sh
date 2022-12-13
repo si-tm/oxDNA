@@ -112,6 +112,7 @@ fi
 
 # cd run_samples/
 mv -f try_my_samples/*.dat results/
+mv -f *.dat results/
 
 mv -f "$SEQFILE" results/
 mv -f "$TOPFILE" results/
