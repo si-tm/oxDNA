@@ -36,7 +36,7 @@ energy_file = energy_trap.dat
 print_conf_interval = 100000000
 print_energy_every = 100000
 time_scale = linear
-external_forces = 1
+external_forces = 0
 external_forces_file = FORCE
 
 data_output_1 = {
