@@ -10,7 +10,7 @@ seed = 42
 ####    SIM PARAMETERS    ####
 ##############################
 ; steps = 10
-steps = 200000
+steps = STEPS
 
 list_type = cells
 ensemble = nvt
