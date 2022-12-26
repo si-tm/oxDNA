@@ -126,3 +126,4 @@ mv -f $SEQDEPFILE results/
 mv -f $TRAPFILE results/
 
 ls try_my_sample
+mv -f try_my_sample/* results/
