@@ -119,3 +119,8 @@ mv -f "$SEQFILE" results/
 mv -f "$TOPFILE" results/
 mv -f "$CONFFILE" results/
 
+# inputs move to results directory
+
+mv -f $INPUTFILE results/
+mv -f $SEQDEPFILE results/
+mv -f $TRAPFILE results/
