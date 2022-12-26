@@ -124,3 +124,5 @@ mv -f "$CONFFILE" results/
 mv -f $INPUTFILE results/
 mv -f $SEQDEPFILE results/
 mv -f $TRAPFILE results/
+
+ls try_my_sample
