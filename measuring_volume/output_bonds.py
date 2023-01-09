@@ -2,7 +2,7 @@
 
 #A utility that prints out the number of hydrogen bonds between different strands in the system 
 
-import base
+# import base
 try:
     import numpy as np
 except:
@@ -17,7 +17,7 @@ command_for_data =  'analysis_data_output_1 = { \n name = stdout \n print_every 
 PROCESSPROGRAM = os.path.join(os.path.dirname(__file__), "../build/bin/DNAnalysis")
 
 if (len(sys.argv) < 3):
-  print('Usage %s input_file trajectory_file [confid]' % sys.argv[0])
+  print('Usage %s input_file trajectory_file topology_file [confid]' % sys.argv[0])
   sys.exit()
 
 
@@ -25,16 +25,17 @@ confid = 0
 #now get topology file name:
 inputfile = sys.argv[1]
 conffile = sys.argv[2]
-if len(sys.argv) >= 4:
- 	confid = int(sys.argv[3])
+topologyfile = sys.argv[3]
+if len(sys.argv) >= 5:
+ 	confid = int(sys.argv[4])
 
-topologyfile = ""
+# topologyfile = ""
 fin = open(inputfile)
-for line in fin:
-    line = line.lstrip()
-    if not line.startswith('#'):
-        if "topology" in line:
-            topologyfile = line.split('=')[1].replace(' ','').replace('\n','')
+# for line in fin:
+#     line = line.lstrip()
+#     if not line.startswith('#'):
+#         if "topology" in line:
+#             topologyfile = line.split('=')[1].replace(' ','').replace('\n','')
 
 myreader = readers.LorenzoReader(conffile,topologyfile)
 mysystem = myreader.get_system()
@@ -55,6 +56,10 @@ launchargs = [PROCESSPROGRAM,inputfile ,'trajectory_file='+tempfile_obj.name,com
 #print command_for_data
 #launchargs = [PROCESSPROGRAM,inputfile ,'trajectory_file='+conffile,command_for_data]
 
+bonds_file_name = "/".join(inputfile.split("/")[:-1]) + "/" + "bonds"
+print(bonds_file_name)
+bonds_file = open(bonds_file_name, 'w')
+
 while mysystem != False:
 	mysystem.map_nucleotides_to_strands()
 	mysystem.print_lorenzo_output(tempfile_obj.name,'/dev/null')
@@ -65,8 +70,12 @@ while mysystem != False:
 	if counter == confid:
 		myinput = subprocess.Popen(launchargs,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		mystdout,mystderr = myinput.communicate()
-		print >> sys.stderr, mystderr
-		print >> sys.stdout, mystdout
+		print(sys.stderr, mystderr)
+		# print(sys.stdout, mystdout)
+		str_mystdout = mystdout.decode("utf-8")
+		bonds_file.write(str_mystdout)
+
+		# bonds_file.write(str(mystdout))
 		sys.exit(1)
 	counter += 1
 	mysystem = myreader.get_system()

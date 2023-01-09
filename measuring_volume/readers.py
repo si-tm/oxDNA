@@ -13,7 +13,7 @@ class LorenzoReader:
 
         if not os.path.isfile(configuration):
             base.Logger.die("Configuration file '%s' is not readable" % configuration)
-
+            
         if not os.path.isfile(topology):
             base.Logger.die("Topology file '%s' is not readable" % topology)
 
