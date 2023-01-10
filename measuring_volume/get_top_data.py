@@ -80,16 +80,18 @@ def get_connection_strands(bonds_name, strands2particle, particle2strand):
 
     return strands2particle, particle2strand
 
-                
+def get_particle_strands_data(target_dir):
+    strands2particle, particle2strand = make_initial_strands_data(target_dir)
+    # bondsファイルを取得する
+    strands2particle, particle2strand = get_connection_strands(gtf.get_bonds(target_dir), strands2particle, particle2strand)
+    return strands2particle, particle2strand 
 
 def main():
     # target_dir = "../results_KakenhiEvolveDNA/seqA/A4/test_a4_200000_1"
     # target_dir = "../results_KakenhiEvolveDNA/seqL/L2/test_l2_200000_1"
     target_dir="../results_KakenhiEvolveDNA/seqL/L14/test_l14_200000_1"
-    strands2particle, particle2strand = make_initial_strands_data(target_dir)
-    # bondsファイルを取得する
-    strands2particle, particle2strand = get_connection_strands(gtf.get_bonds(target_dir), strands2particle, particle2strand)
-
-
+    
+    get_particle_strands_data(target_dir)
+    
 if __name__ == '__main__':
   main()
