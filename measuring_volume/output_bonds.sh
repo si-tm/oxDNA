@@ -7,7 +7,9 @@ get_conf_input () {
     top=`python3 ../common/get_target_file.py $1 top`
 }
 
-target_dir="../results_KakenhiEvolveDNA/seqA/A4/test_a4_200000_1/"
+# target_dir="../results_KakenhiEvolveDNA/seqA/A4/test_a4_200000_1/"
+# target_dir="../results_KakenhiEvolveDNA/seqL/L2/test_l2_200000_1"
+target_dir="../results_KakenhiEvolveDNA/seqL/L14/test_l14_200000_1"
 
 get_conf_input $target_dir
 echo "\n"

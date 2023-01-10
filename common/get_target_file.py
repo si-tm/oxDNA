@@ -49,6 +49,9 @@ def get_top(dir_path):
     # print(d["topology"])
     return d["topology"]
 
+def get_bonds(dir_path):
+    return dir_path + "/bonds"
+
 def test():
     last_conf = get_conf("../results_KakenhiEvolveDNA/seqA/A3/test_a3_200000_1")
     input = get_input("../results_KakenhiEvolveDNA/seqA/A3/test_a3_200000_1")
