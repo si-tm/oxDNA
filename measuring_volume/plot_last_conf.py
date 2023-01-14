@@ -70,7 +70,7 @@ def convexhull_volume_all_strands(target_dir):
     for strand in strands2particle:
         x, y, z = get_r(target_dir, strands2particle[strand])
         volumes[strand] = convexhull_volume(x, y, z)
-        # plot(x, y, z, target_dir)
+        plot(x, y, z, target_dir)
     
     mean_volume = 0.0
     num_of_strands = float(len(strands2particle))
@@ -80,9 +80,10 @@ def convexhull_volume_all_strands(target_dir):
     
     mean_volume /= num_of_strands
     print(target_dir + " : mean volume is " + str(mean_volume))
+    # strands num
+
     return mean_volume
     
-
 def main():
     target_dir = "../results_KakenhiEvolveDNA/seqA/A4/test_a4_200000_1"
     convexhull_volume_all_strands(target_dir)
