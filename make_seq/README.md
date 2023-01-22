@@ -1,6 +1,8 @@
 ## step
 1. make requirement
+`python make_seq/make_requirement_seq.py`
 2. make sequence file from requirement
+`python make_seq/read_requirement`
 3. make input, top and conf file
 4. run oxDNA
 
@@ -65,5 +67,4 @@ domain c = "GGCAACGTCCTGTTACT"
 domain d = "GAACCCGGGAAAGAC"
 domain e = "TTGAAGAGTAGAGCACA"
 domain f = "CCTAGAGAGGCGCACAT"
-
 ```
