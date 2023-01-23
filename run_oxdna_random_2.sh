@@ -35,7 +35,7 @@ make_req3 () {
 }
 
 make_seq () {
-    python make_seq/read_requirement.py $1
+    python3 make_seq/read_requirement.py $1
 }
 
 make_top_conf () {
