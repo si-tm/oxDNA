@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pylab as plt
+import os
+import sys
 
 class read_requirement():
     def __init__(self, path):
@@ -35,25 +37,28 @@ class read_requirement():
             new_str += rev[d]
         return new_str
 
-    def make_seq(self, seq_path):
-        num_of_strand = 10
-        f = open(seq_path, "w")
-        for lst in self.req_dic["structures"]:
-            for rep in range(num_of_strand):
-                str = ""
-                for seq in lst:
-                    str += self.req_dic["domains"][seq]
-                f.write(str + '\n')
-        f.close()
+    def make_seq(self):
+        seq_path =  "/".join(self.req_dic["req_path"].split("/")[:-1]) + "/seq_" + "".join(self.req_dic["req_path"].split("/")[-2])
+        print(seq_path)
+        if os.path.isfile(seq_path) == False:
+            num_of_strand = 10
+            f = open(seq_path, "w")
+            for lst in self.req_dic["structures"]:
+                for rep in range(num_of_strand):
+                    str = ""
+                    for seq in lst:
+                        str += self.req_dic["domains"][seq]
+                    f.write(str + '\n')
+            f.close()
         
 
-        
-def test():
-    test_req = read_requirement("results_soturon/L1/req_test.txt")
-    test_req.make_seq("results_soturon/L1/seq_test")
+def test(path):
+    test_req = read_requirement(path)
+    test_req.make_seq()
 
 def main():
-    test()
+    if sys.argv[1].split("/")[-1][0] == 'r':
+        test(sys.argv[1])
 
 if __name__ == '__main__':
     main()

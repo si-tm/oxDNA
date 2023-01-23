@@ -4,8 +4,20 @@ import pickle
 
 class structures():
     def __init__(self):
-        pickle_load('make_seq/structure_seq/log_seq.pickle')
+        self.structures_dic = pickle_load('make_seq/structure_seq/log_seq.pickle')
+    
 
+def return_num(type_of_l, str_num):
+    dic = pickle_load('make_seq/structure_seq/log_seq.pickle')
+    new_dic = dic
+    if str_num in new_dic[type_of_l]:
+        new_dic[type_of_l][str_num] += 1
+    else:
+        new_dic[type_of_l][str_num] = 0
+    
+    pickle_dump(new_dic, 'make_seq/structure_seq/log_seq.pickle')
+
+    return new_dic[type_of_l][str_num]
 
 
 def pickle_dump(obj, path):

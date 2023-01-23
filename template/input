@@ -43,7 +43,7 @@ external_forces = 0
 
 data_output_1 = {
 	print_every = 10000
-	name = hb_energy.dat
+	name = hb.dat
 	col_1 = {
 		type = step
 	}

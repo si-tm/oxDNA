@@ -42,7 +42,8 @@ external_forces_file = FORCE
 
 data_output_1 = {
 	print_every = 10000
-	name = hb_energy_trap.dat
+	; name = hb_energy_trap.dat
+	name = hb_trap.dat
 	col_1 = {
 		type = step
 	}
