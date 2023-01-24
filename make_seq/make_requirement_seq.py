@@ -143,7 +143,8 @@ class requirement():
 
 
         dir_path = "results_soturon/" + self.req_dic["type_of_l"] + "/" + str_num + "/"
-        file_name =  self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb + "/"
+        # file_name =  self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb + "/"
+        file_name =  self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_time + "/"
         # req_name =  "req_" + self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb
         req_name =  "req_" + self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_time
 

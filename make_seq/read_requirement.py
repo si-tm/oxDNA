@@ -38,7 +38,7 @@ class read_requirement():
         return new_str
 
     def make_seq(self):
-        seq_path =  "/".join(self.req_dic["req_path"].split("/")[:-1]) + "/seq_" + "".join(self.req_dic["req_path"].split("/")[-2])
+        seq_path =  "/".join(self.req_dic["req_path"].split("/")[:-1]) + "/seq_" + "".join(self.req_dic["req_path"].split("/")[-1])
         print(seq_path)
         if os.path.isfile(seq_path) == False:
             num_of_strand = 10
