@@ -125,8 +125,15 @@ class requirement():
         # results_soturon/L1/{str_num}/L1_{str_num}_{no.}/req_L1_{str_num}_{no.}
         comb_of_domain_dic = pickle_load("make_seq/structure_seq/seq_" + self.req_dic["type_of_l"] +".pkl")
         str_num = "d"
+        str_num_lst = []
+        # sort
         for cd in self.req_dic["comb_of_domain"]:
-            str_num += "-" + str(comb_of_domain_dic[cd])
+            str_num_lst.append(comb_of_domain_dic[cd])
+        str_num_lst.sort()
+        print(str_num_lst)
+
+        for snl in str_num_lst:
+            str_num += "-" + str(snl)
         
         number_in_cb = str(lp.return_num(self.req_dic["type_of_l"], str_num))
 
