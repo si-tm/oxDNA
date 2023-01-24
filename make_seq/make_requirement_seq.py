@@ -132,7 +132,7 @@ class requirement():
         for cd in self.req_dic["comb_of_domain"]:
             str_num_lst.append(comb_of_domain_dic[cd])
         str_num_lst.sort()
-        print(str_num_lst)
+        # print(str_num_lst)
 
         for snl in str_num_lst:
             str_num += "-" + str(snl)
