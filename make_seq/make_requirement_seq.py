@@ -6,6 +6,8 @@ import pickle
 sys.path.append("make_seq/")
 import log_pkl as lp
 import os
+from datetime import datetime
+
 
 # templateの場所を選択する logファイル作る
 # results_soturon/L1, L2, L3
@@ -136,10 +138,14 @@ class requirement():
             str_num += "-" + str(snl)
         
         number_in_cb = str(lp.return_num(self.req_dic["type_of_l"], str_num))
+        now = datetime.now()
+        number_in_time = now.strftime("%Y-%m-%d-%H%M%S")
+
 
         dir_path = "results_soturon/" + self.req_dic["type_of_l"] + "/" + str_num + "/"
         file_name =  self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb + "/"
-        req_name =  "req_" + self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb
+        # req_name =  "req_" + self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_cb
+        req_name =  "req_" + self.req_dic["type_of_l"] + "_" + str_num + "_" + number_in_time
 
         if not os.path.isdir(dir_path):
             os.mkdir(dir_path)
