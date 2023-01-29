@@ -9,6 +9,7 @@ class read_requirement():
         self.req_dic = {}
         self.req_dic["req_path"] = path
         self.req_dic["structures"] = []
+        self.req_dic["comb_of_domain"] = []
         self.req_dic["length"] = {}
         self.req_dic["domains"] = {}
         for l in f:
@@ -17,6 +18,7 @@ class read_requirement():
                 self.req_dic["type_of_l"] = lst[-1][:-1]
             if lst[0][0] == 's':
                 self.req_dic["structures"].append(self.read_structure(lst))
+                self.req_dic["comb_of_domain"].append(" ".join(self.read_structure(lst)))
             if lst[0] == "length":
                 self.req_dic["length"][lst[1]] = lst[-1][:-1]
             if lst[0] == "domains":
@@ -50,11 +52,18 @@ class read_requirement():
                         str += self.req_dic["domains"][seq]
                     f.write(str + '\n')
             f.close()
+    
         
 
 def test(path):
     test_req = read_requirement(path)
     test_req.make_seq()
+
+def make_diff_seq(path):
+    # pathからdomainsを取り出す
+    req = read_requirement(path)
+    print(path)
+    print(req.req_dic["domains"])
 
 def main():
     if sys.argv[1].split("/")[-1][0] == 'r':
@@ -62,3 +71,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # make_diff_seq("results_soturon/L1/d-0-1-6-9-11-13/L1_d-0-1-6-9-11-13_2023-01-29-163201/req_L1_d-0-1-6-9-11-13_2023-01-29-163201")

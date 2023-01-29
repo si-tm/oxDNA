@@ -19,38 +19,41 @@ def pickle_load(path):
         return data
 
 class requirement():
-    def __init__(self, L, number_of_types, comb_of_domain, sequence_of_domains):
-        self.req_dic = {}
-        self.req_dic["type_of_l"] = L
-        self.req_dic["number_of_types"] = number_of_types
-        for i in range(len(comb_of_domain)):
-            self.req_dic["s" + str(i)] = comb_of_domain[0] + " @initial 1.0 M"
-        if L == "L1":
-            self.req_dic["domains"] = ["a", "b"]
-            self.req_dic["length a"] = self.req_dic["length b"] = 10
-        if L == "L2":
-            self.req_dic["domains"] = ["a", "b"]
-            self.req_dic["length a"] = self.req_dic["length b"] = 5
-        if L == "L3":
-            self.req_dic["domains"] = ["a", "b", "c", "d", "e", "f"]
-            self.req_dic["length d"] = 15
-            self.req_dic["length a"] = self.req_dic["length b"] = self.req_dic["length c"] = self.req_dic["length e"] = self.req_dic["length f"] = 17
-        
-        for i in range(len(self.req_dic["domains"])):
-            self.req_dic["domains " + self.req_dic["domains"][i]] = sequence_of_domains[i]
+    def __init__(self, L, number_of_types="random", comb_of_domain="random", sequence_of_domains="random"):
+        if L == "L1" or L == "L2" or L == "L3":
+            self.L = L
+        else:
+            print('usage : requirement("L[1-3]")')
 
-    def __init__(self, L):
-        # number_of_types, comb_of_domain, sequence_of_domains
-        number_of_types = self.random_number_of_types(L)
-        comb_of_domain = self.random_comb_of_domain(L, number_of_types)
+        if number_of_types != "random":
+            self.number_of_types = number_of_types
+        else:
+            self.number_of_types = self.random_number_of_types(self.L)
         
+        if comb_of_domain != "random":
+            self.comb_of_domain = comb_of_domain
+        else:
+            self.comb_of_domain = self.random_comb_of_domain(self.L, self.number_of_types)
+
+        if sequence_of_domains != "random":
+            self.sequence_of_domains = sequence_of_domains
+        else:
+            self.sequence_of_domains = self.random_sequence_of_domain(L)
 
         self.req_dic = {}
+
+    def make_req_dic(self):
+
+        L = self.L
+        number_of_types = self.number_of_types
+        comb_of_domain = self.comb_of_domain
+        sequence_of_domains = self.sequence_of_domains
+
         self.req_dic["type_of_l"] = L
         self.req_dic["number_of_types"] = number_of_types
-        self.req_dic["comb_of_domain"] = comb_of_domain
-       
+        self.req_dic["comb_of_domain"] = self.comb_of_domain
         for i in range(len(comb_of_domain)):
+            # self.req_dic["s" + str(i)] = comb_of_domain[0] + " @initial 1.0 M"
             self.req_dic["s" + str(i)] = comb_of_domain[i] + " @initial 1.0 M"
         if L == "L1":
             self.req_dic["domains"] = ["a", "b"]
@@ -63,11 +66,12 @@ class requirement():
             self.req_dic["length d"] = 15
             self.req_dic["length a"] = self.req_dic["length b"] = self.req_dic["length c"] = self.req_dic["length e"] = self.req_dic["length f"] = 17
         
-        sequence_of_domains = self.random_sequence_of_domain(self.req_dic["domains"], self.req_dic)
-        
         for i in range(len(self.req_dic["domains"])):
             self.req_dic["domains " + self.req_dic["domains"][i]] = sequence_of_domains[i]
-    
+        
+        # for r in self.req_dic:
+        #     print(r, self.req_dic[r])
+
     def random_number_of_types(self, L):
         number_of_types = 0
         if L == "L1":
@@ -83,11 +87,25 @@ class requirement():
     def make_random_sequence(self, length):
         seq_lst = ['A', 'T', 'G', 'C']
         return "".join(random.choices(seq_lst, k=length))
-
-    def random_sequence_of_domain(self, domains, dic):
+    
+    def length_of_sequence(self, type_of_l):
+        if type_of_l == "L1":
+            return [10, 10]
+        elif type_of_l == "L2":
+            return [5, 5]
+        elif type_of_l == "L3":
+            return [17, 17, 17, 15, 17, 17]
+        else:
+            return []
+        
+    def random_sequence_of_domain(self, type_of_l):
         sequence_of_domains = []
-        for i in range(len(domains)):
-            sequence_of_domains.append(self.make_random_sequence(dic["length " + domains[i]]))
+        domain_length = self.length_of_sequence(type_of_l)
+        # print(domain_length)
+
+        for d in domain_length:
+            sequence_of_domains.append(self.make_random_sequence(d))
+
         return sequence_of_domains
 
     def make_requirement(self):
@@ -117,12 +135,6 @@ class requirement():
         f.close()
         return path
 
-    def printobj(self):
-        print(self.req_dic["comb_of_domain"])
-
-    def printobj(self):
-        print(self.req_dic["comb_of_domain"])
-
     def dir_name(self):
         # results_soturon/L1/{str_num}/L1_{str_num}_{no.}/req_L1_{str_num}_{no.}
         comb_of_domain_dic = pickle_load("make_seq/structure_seq/seq_" + self.req_dic["type_of_l"] +".pkl")
@@ -139,7 +151,7 @@ class requirement():
         
         number_in_cb = str(lp.return_num(self.req_dic["type_of_l"], str_num))
         now = datetime.now()
-        number_in_time = now.strftime("%Y-%m-%d-%H%M%S")
+        number_in_time = now.strftime("%Y-%m-%d-%H%M%S%")
 
 
         dir_path = "results_soturon/" + self.req_dic["type_of_l"] + "/" + str_num + "/"
@@ -154,6 +166,29 @@ class requirement():
         if not os.path.isdir(dir_path + file_name):
             os.mkdir(dir_path + file_name)
         return dir_path + file_name + req_name
+
+def make_random_sequence(length):
+        seq_lst = ['A', 'T', 'G', 'C']
+        return "".join(random.choices(seq_lst, k=length))
+
+def length_of_sequence(type_of_l):
+    if type_of_l == "L1":
+        return [10, 10]
+    elif type_of_l == "L2":
+        return [5, 5]
+    elif type_of_l == "L3":
+        return [17, 17, 17, 15, 17, 17]
+    else:
+        return []
+    
+def random_sequence_of_domain(type_of_l):
+    sequence_of_domains = []
+    domain_length = length_of_sequence(type_of_l)
+
+    for d in domain_length:
+        sequence_of_domains.append(make_random_sequence(d))
+
+    return sequence_of_domains
 
 
 def test():
@@ -173,6 +208,14 @@ def make_l3_req():
     reql3 = requirement("L3")
     print(reql3.make_requirement())
 
+def make_req(type_of_l):
+    type_of_l = "L1"
+    sequence_of_domains = random_sequence_of_domain(type_of_l)
+    print(sequence_of_domains)
+    reql = requirement(L=type_of_l, sequence_of_domains=sequence_of_domains)
+    reql.make_req_dic()
+    reql.make_requirement()
+
 def main():
     # test()
     if len(sys.argv) == 1:
@@ -186,6 +229,18 @@ def main():
     else:
         print("usage : python make_seq/make_requirement_seq.py L[1-3]")
 
+    # if len(sys.argv) == 2:
+    #     test()
+    # elif sys.argv[1] == "L1":
+    #     make_req("L1")
+    # elif sys.argv[1] == "L2":
+    #     make_req("L2")
+    # elif sys.argv[1] == "L3":
+    #     make_req("L3")
+    # else:
+    #     print("usage : python make_seq/make_requirement_seq.py L[1-3] seq_path")
+
 
 if __name__ == '__main__':
-  main()
+    # main()
+    make_req()
