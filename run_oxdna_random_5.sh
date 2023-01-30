@@ -152,8 +152,9 @@ fi
 
 cp -r $dir_path "results/"$dir_path"/"
 
-echo $req
-echo $new_req
-echo $dir_path
-echo "results/"$dir_path
-ls "results/"$dir_path"/"
+# echo $req
+# echo $new_req
+# echo $dir_path
+# echo "results/"$dir_path
+# ls "results/"$dir_path"/"
+cat $INPUT
