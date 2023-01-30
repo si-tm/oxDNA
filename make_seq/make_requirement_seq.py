@@ -151,7 +151,7 @@ class requirement():
         
         number_in_cb = str(lp.return_num(self.req_dic["type_of_l"], str_num))
         now = datetime.now()
-        number_in_time = now.strftime("%Y-%m-%d-%H%M%S%")
+        number_in_time = now.strftime("%Y-%m-%d-%H%M%S")
 
 
         dir_path = "results_soturon/" + self.req_dic["type_of_l"] + "/" + str_num + "/"

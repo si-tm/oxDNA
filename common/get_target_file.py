@@ -7,26 +7,41 @@ import sys
 
 
 # extracting files from directory
-def file_dic(dir_path):
-    files = glob.glob(dir_path + "/*")
 
-    # target seq file
-    target_c = ""
-    for d in dir_path.split("/"):
-        if "seq" in d:
-            target_c = d[-1]
+def file_dic(dir_path):
+    # input/results/oxdna_random_1/L1/d-0-6-7-4/L1_d-0-6-7-4_0/L1_d-0-6-7-4_0/
+    if dir_path[-1] == "/":
+        files = glob.glob(dir_path + "*")
+        dir_path = dir_path[:-1]
+    else:
+        files = glob.glob(dir_path + "/*")
+    
+    # target file
+    target = dir_path.split("/")[-1]
 
     fd = {}
 
     for f in files:
-        key = f.split("/")[-1][:f.split("/")[-1].find("_seq" + target_c + "-")]
+        key = f.split("/")[-1]
+        key = key[:key.find("_" + target)]
         fd[key] = f
         if f[-4:] == ".top":
             fd["topology"] = f
+        if key == "hb":
+            fd["hb_energy"] = f
+        if "seq_req" in key:
+            fd["seq"] = f
+        if "req_L" in key:
+            fd["req"] = f
+        # if "seq" in key:
+        #     fd["seq"] = f
+
+        # if f.split("/")[-1][:4] == "seq" + target_c:
+        #     fd["seq"] = f
     
     # for f in fd:
-    #     print(f)
-
+    #     print(f, fd[f])
+    
     return fd
 
 def get_conf(dir_path):
@@ -46,16 +61,32 @@ def get_new_input(dir_path):
 
 def get_top(dir_path):
     d = file_dic(dir_path)
-    # print(d["topology"])
     return d["topology"]
 
+def get_seq(dir_path):
+    d = file_dic(dir_path)
+    # print(d["seq"])
+    return d["seq"]
+
 def get_bonds(dir_path):
-    return dir_path + "/bonds"
+    if dir_path[-1] == "/":
+        return dir_path + "bonds"
+    else:
+        return dir_path + "/bonds"
+
+def get_req(dir_path):
+    d = file_dic(dir_path)
+    return d["req"]
 
 def test():
-    last_conf = get_conf("../results_KakenhiEvolveDNA/seqA/A3/test_a3_200000_1")
-    input = get_input("../results_KakenhiEvolveDNA/seqA/A3/test_a3_200000_1")
-    top = get_top("../results_KakenhiEvolveDNA/seqA/A3/test_a3_200000_1")
+    dir_path = "../input/results/oxdna_random_1/L1/d-0-6-7-4/L1_d-0-6-7-4_0/L1_d-0-6-7-4_0/"
+    last_conf = get_conf(dir_path)
+    print(last_conf)
+    req = get_req(dir_path)
+    print(req)
+    # last_conf = get_conf("../../input/results/oxdna_ked/seqA/A3/test_a3_200000_1")
+    # input = get_input("../../input/results/oxdna_ked/seqA/A3/test_a3_200000_1")
+    # top = get_top("../../input/results/oxdna_ked/seqA/A3/test_a3_200000_1")
 
 
 def main():
@@ -76,6 +107,10 @@ def main():
     if sys.argv[2] == "top":
         top = get_top(sys.argv[1])
         print(top)
+    if sys.argv[2] == "req":
+        req = get_req(sys.argv[1])
+        print(req)
 
 if __name__ == '__main__':
   main()
+#   test()
