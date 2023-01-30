@@ -156,5 +156,6 @@ cp -r $dir_path "results/"$dir_path"/"
 # echo $new_req
 # echo $dir_path
 # echo "results/"$dir_path
-# ls "results/"$dir_path"/"
 cat $INPUTFILE
+ls $dir_path
+ls "results/"$dir_path"/"
