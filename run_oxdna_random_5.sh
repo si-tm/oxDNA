@@ -151,7 +151,7 @@ else
 fi
 
 mkdir -p "results/"$dir_path"/"
-mv -r $dir_path"/" "results/"$dir_path"/"
+mv $dir_path"/" "results/"$dir_path"/"
 
 # echo $req
 # echo $new_req
