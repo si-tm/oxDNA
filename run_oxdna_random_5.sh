@@ -117,9 +117,11 @@ run_oxdna () {
 }
 
 
-target_dir=$1
+# target_dir=$1
 # target_dir="results_soturon/L1/d-0-1/L1_d-0-1_2023-01-27-083608/L1_d-0-1_2023-01-27-083608/"
-req=`extract_req`
+# req=`extract_req`
+# req="reqs/random_5/L1/L1/req_L1_d-0-1-11-15_2023-01-27-054537"
+req=$1
 # echo $req
 new_req=`make_diff-seq_req $req`
 # echo $new_req
@@ -150,5 +152,5 @@ fi
 
 cp -r $dir_path "results/"$dir_path
 
-echo $target_dir
+echo $req
 echo $new_req
