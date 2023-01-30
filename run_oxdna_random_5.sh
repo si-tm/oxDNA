@@ -157,5 +157,5 @@ mv $dir_path"/" "results/"$dir_path"/"$target
 # echo $dir_path
 # echo "results/"$dir_path
 cat "results/"$INPUTFILE
-ls "results/"
-ls "results/"$dir_path"/"$target
+# ls "results/"
+# ls "results/"$dir_path"/"$target
