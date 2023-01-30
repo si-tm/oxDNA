@@ -150,8 +150,7 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-mkdir -p "results/"$dir_path"/"
-mv $dir_path"/" "results/"$dir_path"/"
+mv $dir_path"/" "results/"$dir_path"/"$target
 
 # echo $req
 # echo $new_req
