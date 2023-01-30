@@ -158,4 +158,4 @@ mv $dir_path"/" "results/"$dir_path"/"$target
 # echo "results/"$dir_path
 cat "results/"$INPUTFILE
 # ls "results/"
-# ls "results/"$dir_path"/"$target
+ls "results/"$dir_path"/"$target
