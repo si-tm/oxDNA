@@ -157,4 +157,4 @@ cp -r $dir_path "results/"$dir_path"/"
 # echo $dir_path
 # echo "results/"$dir_path
 # ls "results/"$dir_path"/"
-cat $INPUT
+cat $INPUTFILE
