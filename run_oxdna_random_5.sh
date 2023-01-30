@@ -150,7 +150,7 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-mkdir "results/"$dir_path"/"
+mkdir -p "results/"$dir_path"/"
 cp -r $dir_path"/*" "results/"$dir_path"/"
 
 # echo $req
