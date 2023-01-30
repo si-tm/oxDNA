@@ -156,6 +156,6 @@ mv $dir_path"/" "results/"$dir_path"/"$target
 # echo $new_req
 # echo $dir_path
 # echo "results/"$dir_path
-cat $INPUTFILE
+cat "results/"$INPUTFILE
 ls "results/"
 ls "results/"$dir_path"/"$target
