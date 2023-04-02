@@ -93,7 +93,8 @@ def make_pil(res_container,result_dir,max_indiv = 30):
 def trash_pils():
     from send2trash import send2trash
 
-    pils = files = glob.glob("../results/peppercorn*/final*/")
+    # pils = files = glob.glob("../results/peppercorn*/final*/")
+    pils = files = glob.glob("results/p/*/final_*")
     for path in pils:
         send2trash(path)
 
@@ -113,7 +114,8 @@ def trash_pils():
 
 
 def make_pil_for_all():
-    lst = glob.glob("../results/peppercorn*/final_*.p")
+    lst = glob.glob("results/p/*/final_*.p")
+    # lst = glob.glob("../results/peppercorn*/final_*.p")
 
     for path in lst:
         res = read_pickle(path)
