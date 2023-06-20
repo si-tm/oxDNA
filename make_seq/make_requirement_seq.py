@@ -208,11 +208,16 @@ def make_l3_req():
     reql3 = requirement("L3")
     print(reql3.make_requirement())
 
-def make_req(type_of_l):
+def make_random_req(type_of_l):
     type_of_l = "L1"
     sequence_of_domains = random_sequence_of_domain(type_of_l)
     print(sequence_of_domains)
     reql = requirement(L=type_of_l, sequence_of_domains=sequence_of_domains)
+    reql.make_req_dic()
+    reql.make_requirement()
+
+def make_req(type_of_l, number_of_types, comb_of_domain, sequence_of_domains):
+    reql = requirement(L=type_of_l, number_of_types=number_of_types, comb_of_domain=comb_of_domain, sequence_of_domains=sequence_of_domains)
     reql.make_req_dic()
     reql.make_requirement()
 
@@ -243,4 +248,4 @@ def main():
 
 if __name__ == '__main__':
     # main()
-    make_req()
+    make_req(type_of_l="L1", number_of_types="2", comb_of_domain="b a b a*", sequence_of_domains=["GTTACTTGGA", "GGTTTTTTGC"])

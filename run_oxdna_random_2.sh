@@ -1,15 +1,37 @@
-#!/bin/bash
-# #!/usr/bin/bash
+#!/usr/bin/bash
 
-extract_req () {
-    runfile="common/get_target_file.py"
-    python3 $runfile $target_dir "req"
+# make_reqs () {
+#     for i in `seq 0 1`
+#     do
+#         python3 make_seq/make_requirement_seq.py
+#     done
+# }
+
+# make_seqs () {
+#     reqlst=`ls results_soturon/*/*/*/*`
+#     for l in $reqlst
+#     do
+#     echo $l
+#     python make_seq/read_requirement.py $l
+#     done
+# }
+
+return_input () {
+    target_dir=$1"/input_L*"
+    echo `ls $1`
 }
 
-make_diff-seq_req () {
-    # echo $type_of_l
-    runfile="make_seq/make_diff-seq.py"
-    python3 $runfile $1
+make_req1 () {
+    req_path=`python3 make_seq/make_requirement_seq.py L1`
+    echo $req_path
+}
+make_req2 () {
+    req_path=`python3 make_seq/make_requirement_seq.py L2`
+    echo $req_path
+}
+make_req3 () {
+    req_path=`python3 make_seq/make_requirement_seq.py L3`
+    echo $req_path
 }
 
 make_seq () {
@@ -17,7 +39,7 @@ make_seq () {
 }
 
 make_top_conf () {
-    BOX_SIZE=10000
+    BOX_SIZE=100
     SEQ=$1
     python3 utils/generate-sa-soturon.py $BOX_SIZE $SEQ
 }
@@ -53,8 +75,9 @@ make_input () {
     sed -i -e "s|last_conf|${dir_path}/last_conf_${target}.dat|" $INPUTFILE
 
     sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
-    sed -i -e 's|STEPS|200000|' $INPUTFILE
-    # sed -i -e 's|STEPS|20|' $INPUTFILE
+    # sed -i -e 's|STEPS|200000|' $INPUTFILE
+    sed -i -e 's|STEPS|100000000|' $INPUTFILE
+    
 
     # echo "$SEQDEPFILE fix"
 
@@ -68,8 +91,8 @@ make_input () {
 
     sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
     sed -i -e 's|seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt|seq_dep_file = oxDNA1_sequence_dependent_parameters.txt' $SEQDEPFILE
-    sed -i -e 's|STEPS|200000|' $SEQDEPFILE
-    # sed -i -e 's|STEPS|20|' $SEQDEPFILE
+    # sed -i -e 's|STEPS|200000|' $SEQDEPFILE
+    sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
 
     # echo "$TRAPFILE fix"
 
@@ -84,8 +107,8 @@ make_input () {
     sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
     sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
     sed -i -e 's|external_forces = 1|external_forces = 0|' $TRAPFILE # forceファイルを使わない設定
-    sed -i -e 's|STEPS|200000|' $TRAPFILE
-    # sed -i -e 's|STEPS|20|' $TRAPFILE
+    # sed -i -e 's|STEPS|200000|' $TRAPFILE
+    sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
 
 }
 
@@ -117,18 +140,20 @@ run_oxdna () {
     fi
 }
 
+echo $1
 
-# target_dir=$1
-# target_dir="results_soturon/L1/d-0-1/L1_d-0-1_2023-01-27-083608/L1_d-0-1_2023-01-27-083608/"
-# req=`extract_req`
-# req="reqs/random_5/L1/L1/req_L1_d-0-1-11-15_2023-01-27-054537"
-req=$1
-# echo $req
-# new_req=`make_diff-seq_req $req`
-new_req=$req
-# echo $new_req
+if [ $1 = "L1" ]; then
+    req_name=`make_req1`
+elif [ $1 = "L2" ]; then 
+    req_name=`make_req2`
+elif [ $1 = "L3" ]; then 
+    req_name=`make_req3`
+else
+    echo "./make_requirement_seq.py L[0-3]"
+fi
 
-seq_name=`make_seq $new_req`
+echo $req_name
+seq_name=`make_seq $req_name`
 echo $seq_name
 make_top_conf $seq_name
 dir_path=`dirname $seq_name`
@@ -152,12 +177,4 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-mv $dir_path"/" "results/"$dir_path"/"$target
-
-# echo $req
-# echo $new_req
-# echo $dir_path
-# echo "results/"$dir_path
-cat "results/"$INPUTFILE
-# ls "results/"
-ls "results/"$dir_path"/"$target
+cp -r $dir_path "results/"$dir_path
