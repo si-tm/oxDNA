@@ -21,7 +21,7 @@ class read_requirement():
                 self.req_dic["comb_of_domain"].append(" ".join(self.read_structure(lst)))
             if lst[0] == "length":
                 self.req_dic["length"][lst[1]] = lst[-1][:-1]
-            if lst[0] == "domains":
+            if lst[0] == "domain":
                 self.req_dic["domains"][lst[1]] = lst[-1][:-1]
                 self.req_dic["domains"][lst[1] + "*"] = self.seq_reverse(lst[-1][:-1])
 
@@ -71,4 +71,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # test(path="reqs/fromQD/req_20230620032730.txt")
     # make_diff_seq("results_soturon/L1/d-0-1-6-9-11-13/L1_d-0-1-6-9-11-13_2023-01-29-163201/req_L1_d-0-1-6-9-11-13_2023-01-29-163201")

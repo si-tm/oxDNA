@@ -247,5 +247,5 @@ def main():
 
 
 if __name__ == '__main__':
-    # main()
-    make_req(type_of_l="L1", number_of_types="2", comb_of_domain="b a b a*", sequence_of_domains=["GTTACTTGGA", "GGTTTTTTGC"])
+    main()
+    # make_req(type_of_l="L1", number_of_types="2", comb_of_domain="b a b a*", sequence_of_domains=["GTTACTTGGA", "GGTTTTTTGC"])
