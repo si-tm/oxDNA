@@ -1,5 +1,5 @@
-#!/bin/bash
-# #!/usr/bin/bash
+#!/usr/bin/bash
+# #!/bin/bash
 
 # input strands [1, 0, ... ] then make their req
 
@@ -49,8 +49,8 @@ make_input () {
     sed -i -e "s|last_conf|${dir_path}/last_conf_${target}.dat|" $INPUTFILE
 
     sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
-    # sed -i -e 's|STEPS|200000|' $INPUTFILE
-    sed -i -e 's|STEPS|100000000|' $INPUTFILE
+    sed -i -e 's|STEPS|200000|' $INPUTFILE
+    # sed -i -e 's|STEPS|100000000|' $INPUTFILE
     
 
     # echo "$SEQDEPFILE fix"
