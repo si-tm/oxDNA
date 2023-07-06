@@ -177,4 +177,4 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-cp -r $dir_path "results/"$dir_path
+cp -r $dir_path "results/"$dir_path"/"

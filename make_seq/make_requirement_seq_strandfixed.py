@@ -196,7 +196,7 @@ def test():
     # make_l2_req()
     # make_l3_req()
 
-# fix strand
+# fix strand [1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1] 
 def make_l1_req():
     reql1 = requirement("L1")
     print(reql1.make_requirement())
