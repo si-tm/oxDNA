@@ -13,7 +13,8 @@ make_seq () {
 }
 
 make_top_conf () {
-    BOX_SIZE=100
+    # BOX_SIZE=100
+    BOX_SIZE=500
     SEQ=$1
     python3 utils/generate-sa-soturon.py $BOX_SIZE $SEQ
 }
