@@ -43,7 +43,7 @@ class read_requirement():
         seq_path =  "/".join(self.req_dic["req_path"].split("/")[:-1]) + "/seq_" + "".join(self.req_dic["req_path"].split("/")[-1])
         print(seq_path)
         if os.path.isfile(seq_path) == False:
-            num_of_strand = 10
+            num_of_strand = 1
             f = open(seq_path, "w")
             for lst in self.req_dic["structures"]:
                 for rep in range(num_of_strand):
