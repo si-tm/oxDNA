@@ -1,5 +1,5 @@
-#!/usr/bin/bash
-# #!/bin/bash
+#!/bin/bash
+# # !/usr/bin/bash
 
 # input strands [1, 0, ... ] then make their req
 
