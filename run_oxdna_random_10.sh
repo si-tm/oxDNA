@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-# # !/bin/bash
+# !/bin/bash
 
 # ./run_oxdna_random_10.sh reqs/fromQD/L3 r20230830150848
 # 引数の数をチェック
@@ -21,12 +21,12 @@ fi
 
 # ディレクトリ内のファイルをリストアップ
 files=$(find "$directory" -type f)
+IFS=$'\n' read -d '' -r -a files_array <<< "$files"
 
 # ファイルが見つかった場合、一覧表示
 if [ -n "$files" ]; then
   echo "Files in $directory with prefix '$prefix':"
-#   echo "$files"
-  for file in "${files[@]}"; do
+  for file in "${files_array[@]}"; do
   echo "Processing file: $file"
   # ここにファイルごとの処理を追加
   ./run_oxdna_random_9.sh $file
