@@ -10,7 +10,7 @@ seed = 42
 ####    SIM PARAMETERS    ####
 ##############################
 ; steps = 10
-steps = STEPS
+steps = 200000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -33,15 +33,15 @@ verlet_skin = 0.5
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = TOP
-conf_file = CONF
-lastconf_file = last_conf_seq_dep.dat
-trajectory_file = trajectory_seq_dep.dat
+topology = reqs/fromQD/L3/r20230830195630/r1693423278326-279/generated_r1693423278326-279.top
+conf_file = reqs/fromQD/L3/r20230830195630/r1693423278326-279/generated_r1693423278326-279.dat
+lastconf_file = reqs/fromQD/L3/r20230830195630/r1693423278326-279/last_conf_seq_dep_r1693423278326-279.dat
+trajectory_file = reqs/fromQD/L3/r20230830195630/r1693423278326-279/trajectory_seq_dep_r1693423278326-279.dat
 refresh_vel = 1
-log_file = log_seq_dep.dat
+log_file = reqs/fromQD/L3/r20230830195630/r1693423278326-279/log_seq_dep_r1693423278326-279.dat
 no_stdout_energy = 1
 restart_step_counter = 1
-energy_file = energy_seq_dep.dat
+energy_file = reqs/fromQD/L3/r20230830195630/r1693423278326-279/energy_seq_dep_r1693423278326-279.dat
 ;print_conf_interval = 100000000
 print_conf_interval = 100000
 print_energy_every = 100000
@@ -50,8 +50,8 @@ external_forces = 0
 
 data_output_1 = {
 	print_every = 10000
-	; name = hb_energy_seq_dep.dat
-	name = hb_seq_dep.dat
+	; name = hb_reqs/fromQD/L3/r20230830195630/r1693423278326-279/energy_seq_dep_r1693423278326-279.dat
+	name = reqs/fromQD/L3/r20230830195630/r1693423278326-279/hb_energy_seq_dep_r1693423278326-279.dat
 	col_1 = {
 		type = step
 	}

@@ -19,7 +19,8 @@ ensemble = nvt
 delta_translation = 0.22
 delta_rotation = 0.22
 
-T = 334 K
+; T = 334 K
+T = TEMP K
 dt = 0.003
 verlet_skin = 0.5
 

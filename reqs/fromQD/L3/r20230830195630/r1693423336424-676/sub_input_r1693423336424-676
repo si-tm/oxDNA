@@ -1,4 +1,3 @@
-##############################
 ####  PROGRAM PARAMETERS  ####
 ##############################
 sim_type = VMMC
@@ -10,7 +9,7 @@ seed = 42
 ####    SIM PARAMETERS    ####
 ##############################
 ; steps = 10
-steps = STEPS
+steps = 200000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -20,28 +19,22 @@ ensemble = nvt
 delta_translation = 0.22
 delta_rotation = 0.22
 
-use_average_seq = 0
-; seq_dep_file = ../../oxDNA1_sequence_dependent_parameters.txt
-; seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt
-seq_dep_file = oxDNA1_sequence_dependent_parameters.txt
-
-; T = 334 K
-T = TEMP K
+T = 298 K
 dt = 0.003
 verlet_skin = 0.5
 
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = TOP
-conf_file = CONF
-lastconf_file = last_conf_seq_dep.dat
-trajectory_file = trajectory_seq_dep.dat
+topology = reqs/fromQD/L3/r20230830195630/r1693423336424-676/generated_r1693423336424-676.top
+conf_file = reqs/fromQD/L3/r20230830195630/r1693423336424-676/generated_r1693423336424-676.dat
+lastconf_file = reqs/fromQD/L3/r20230830195630/r1693423336424-676/last_conf_r1693423336424-676.dat.dat
+trajectory_file = reqs/fromQD/L3/r20230830195630/r1693423336424-676/trajectory_r1693423336424-676.dat
 refresh_vel = 1
-log_file = log_seq_dep.dat
+log_file = reqs/fromQD/L3/r20230830195630/r1693423336424-676/log_r1693423336424-676.dat
 no_stdout_energy = 1
 restart_step_counter = 1
-energy_file = energy_seq_dep.dat
+energy_file = reqs/fromQD/L3/r20230830195630/r1693423336424-676/energy_r1693423336424-676.dat
 ;print_conf_interval = 100000000
 print_conf_interval = 100000
 print_energy_every = 100000
@@ -50,8 +43,7 @@ external_forces = 0
 
 data_output_1 = {
 	print_every = 10000
-	; name = hb_energy_seq_dep.dat
-	name = hb_seq_dep.dat
+	name = reqs/fromQD/L3/r20230830195630/r1693423336424-676/hb_r1693423336424-676.dat
 	col_1 = {
 		type = step
 	}
