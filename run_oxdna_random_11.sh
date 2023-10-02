@@ -22,7 +22,7 @@ make_top_conf () {
 
 make_input () {
     # dir_path /　なし
-    dir_path=$1"t_"$3
+    dir_path=$1
     target=$2
     temperature=$3
     # テンプレートの用意
