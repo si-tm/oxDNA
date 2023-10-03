@@ -52,9 +52,10 @@ make_input () {
     sed -i -e "s|last_conf|${dir_path}/last_conf_${target}.dat|" $INPUTFILE
 
     sed -i -e "s|CONF|$CONFFILE|" $INPUTFILE
+    # sed -i -e 's|STEPS|200000|' $INPUTFILE
     # sed -i -e 's|STEPS|2000000|' $INPUTFILE
-    sed -i -e 's|STEPS|200000|' $INPUTFILE
     # sed -i -e 's|STEPS|100000000|' $INPUTFILE
+    sed -i -e 's|STEPS|10|' $INPUTFILE
     sed -i -e "s|TEMP|$temperature|" $INPUTFILE
     
 
@@ -70,9 +71,10 @@ make_input () {
 
     sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
     sed -i -e 's|seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt|seq_dep_file = oxDNA1_sequence_dependent_parameters.txt' $SEQDEPFILE
-    sed -i -e 's|STEPS|200000|' $SEQDEPFILE
+    # sed -i -e 's|STEPS|200000|' $SEQDEPFILE
     # sed -i -e 's|STEPS|2000000|' $SEQDEPFILE
     # sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
+    sed -i -e 's|STEPS|10|' $SEQDEPFILE
     sed -i -e "s|TEMP|$temperature|" $SEQDEPFILE
 
 
@@ -89,9 +91,10 @@ make_input () {
     sed -i -e "s|CONF|$CONFFILE|" $TRAPFILE
     sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
     sed -i -e 's|external_forces = 1|external_forces = 0|' $TRAPFILE # forceファイルを使わない設定
-    sed -i -e 's|STEPS|200000|' $TRAPFILE
+    # sed -i -e 's|STEPS|200000|' $TRAPFILE
     # sed -i -e 's|STEPS|2000000|' $TRAPFILE
     # sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
+    sed -i -e 's|STEPS|10|' $SEQDEPFILE
     sed -i -e "s|TEMP|$temperature|" $TRAPFILE
 
 }
@@ -152,4 +155,4 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-cp -r $dir_path "results/"$dir_path"_t"$temperature"/"
+cp -r $dir_path "results/"$target"_t"$temperature

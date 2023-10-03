@@ -1,5 +1,5 @@
 #!/bin/bash
-# !/usr/bin/bash
+# #!/usr/bin/bash
 
 # ./run_oxdna_random_12.sh reqs/fromQD/L3 r20230830150848 298
 # 引数の数をチェック
