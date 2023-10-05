@@ -25,7 +25,16 @@ make_input () {
     dir_path=$1
     target=$2
     temperature=$3
+
+    echo "wow"
+    echo $dir_path
+    echo $target
+    echo $temperature
+    echo "wow"
+
     # テンプレートの用意
+    # dir_path : temperature
+    # target : " " 
     INPUTFILE="${dir_path}/input_${target}"
     SEQDEPFILE="${dir_path}/input_seq_dep_${target}"
     TRAPFILE="${dir_path}/input_trap_${target}"
@@ -136,8 +145,11 @@ echo $seq_name
 make_top_conf $seq_name
 dir_path=`dirname $seq_name`
 target=`basename $dir_path`
+echo "wow"
 echo $dir_path
 echo $target
+echo $temperature
+echo "wow"
 make_input $dir_path $target $temperature
 echo $INPUTFILE
 run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
