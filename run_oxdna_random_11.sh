@@ -155,4 +155,9 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-cp -r $dir_path "results/"$target"_t"$temperature
+echo $dir_path
+echo "results/"$target"_t"$temperature
+echo $temperature
+
+
+cp -r $dir_path"/"$target "results/"$target"_t"$temperature
