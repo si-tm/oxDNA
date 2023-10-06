@@ -140,6 +140,8 @@ run_oxdna () {
 
 req_name=$1
 temperature=$2
+echo "req_name : "
+echo $req_name
 seq_name=`make_seq $req_name`
 echo "seq_name : "
 echo $seq_name
