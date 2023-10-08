@@ -38,7 +38,8 @@ if [ -n "$files" ]; then
   # ここにファイルごとの処理を追加
   echo $file
   echo $temperature
-  echo "./run_oxdna_random_11.sh $file $temperature"
+  base=`basaename $file`
+  echo "./run_oxdna_random_11.sh $file/$base $temperature"
   ./run_oxdna_random_11.sh $file $temperature
 done
 else
