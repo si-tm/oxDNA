@@ -13,6 +13,9 @@
 # directory="$1/$2"
 # prefix="$2"
 # temperature=$3
+echo $1
+echo $2
+echo $3
 directory="$1/$2"
 prefix="$2"
 temperature="$3"
