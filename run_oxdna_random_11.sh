@@ -176,4 +176,5 @@ echo $temperature
 
 
 cp -r $dir_path"/"$target "results/"$target"_t"$temperature
-cp -r $dir_path "results/"$target"_t"$temperature
+cp -r $dir_path "results/"$target"_t"$temperature"/"
+cp -r $dir_path "results/"$dir_path"/"
