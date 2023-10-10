@@ -148,11 +148,6 @@ echo $seq_name
 make_top_conf $seq_name
 dir_path=`dirname $seq_name`
 target=`basename $dir_path`
-echo "wow"
-echo $dir_path
-echo $target
-echo $temperature
-echo "wow"
 make_input $dir_path $target $temperature
 echo $INPUTFILE
 run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
@@ -170,11 +165,9 @@ else
     mkdir -p "results/"$dir_path
 fi
 
-echo $dir_path
-echo "results/"$target"_t"$temperature
-echo $temperature
 
 
-cp -r $dir_path"/"$target "results/"$target"_t"$temperature
-cp -r $dir_path "results/"$target"_t"$temperature"/"
+# cp -r $dir_path"/"$target "results/"$target"_t"$temperature
+# cp -r $dir_path "results/"$target"_t"$temperature"/"
 cp -r $dir_path "results/"$dir_path"/"
+rm -rf "results/reqs/"
