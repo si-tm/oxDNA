@@ -46,11 +46,11 @@ def main():
                 os.mkdir(f"r{dates_and_times[0]}")
             except:
                 print(f"r{dates_and_times[0]}は存在しています")
-            filename = f"r{dates_and_times[0]}/req_r{dates_and_times[0]}.txt"
+            filename = f"{target}/r{dates_and_times[0]}/req_r{dates_and_times[0]}.txt"
             print(filename)
 
             with open(filename, 'w') as file:
-                with open("../template_seq/requirement_L3.txt", 'r') as temp:
+                with open("template_seq/requirement_L3.txt", 'r') as temp:
                     is_written_structure = False
                     is_written_seq = False
                     for l in temp:
