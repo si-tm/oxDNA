@@ -171,6 +171,7 @@ fi
 
 echo $dir_path
 # cp -r $dir_path"/"$target "results/"$target"_t"$temperature # こっち？
-cp -r $dir_path "results/"$target"_t"$temperature"/"
+# cp -r $dir_path "results/"$target"_t"$temperature"/"
+cp -r $dir_path "results/"
 # cp -r $dir_path "results/"$dir_path"/" # 違う？
 rm -rf "results/reqs/"
