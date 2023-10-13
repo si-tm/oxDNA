@@ -6,18 +6,22 @@ import shutil
 def main():
     # sequence of domains
 
-    filename = "seqL.csv"
+    filename = "seqJ.csv"
         
     # structure
     """
-    s0 = f c* f @initial 1.0 M
-    s1 = b* c f* @initial 1.0 M
-    s2 = f* b d* @initial 1.0 M
+    s0 = a b a @initial 1.0 M
+    s1 = c e* a @initial 1.0 M
+    s2 = a* c* f @initial 1.0 M
+    s3 = c* c e @initial 1.0 M
+    s4 = f* e* f @initial 1.0 M
     """
     structure_lst = [
-        "s0 = f c* f @initial 1.0 M",
-        "s1 = b* c f* @initial 1.0 M",
-        "s2 = f* b d* @initial 1.0 M"
+        "s0 = a b a @initial 1.0 M",
+        "s1 = c e* a @initial 1.0 M",
+        "s2 = a* c* f @initial 1.0 M",
+        "s3 = c* c e @initial 1.0 M",
+        "s4 = f* e* f @initial 1.0 M"
         ]
     
     seq_lst = [
