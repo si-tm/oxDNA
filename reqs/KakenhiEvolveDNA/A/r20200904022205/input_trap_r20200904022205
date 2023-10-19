@@ -1,0 +1,54 @@
+##############################
+####  PROGRAM PARAMETERS  ####
+##############################
+sim_type = VMMC
+backend = CPU
+#debug = 1
+seed = 42
+
+##############################
+####    SIM PARAMETERS    ####
+##############################
+; steps = 10
+steps = STEPS
+
+list_type = cells
+ensemble = nvt
+delta_translation = 0.22
+delta_rotation = 0.22
+
+; T = 334 K
+T = 298 K
+dt = 0.003
+verlet_skin = 0.5
+
+##############################
+####    INPUT / OUTPUT    ####
+##############################
+topology = reqs/KakenhiEvolveDNA/A/r20200904022205/generated_r20200904022205.top
+conf_file = reqs/KakenhiEvolveDNA/A/r20200904022205/generated_r20200904022205.dat
+lastconf_file = reqs/KakenhiEvolveDNA/A/r20200904022205/last_conf_trap_r20200904022205.dat
+trajectory_file = reqs/KakenhiEvolveDNA/A/r20200904022205/trajectory_trap_r20200904022205.dat
+refresh_vel = 1
+log_file = reqs/KakenhiEvolveDNA/A/r20200904022205/log_trap_r20200904022205.dat
+no_stdout_energy = 1
+restart_step_counter = 1
+energy_file = reqs/KakenhiEvolveDNA/A/r20200904022205/energy_trap_r20200904022205.dat
+;print_conf_interval = 100000000
+print_conf_interval = 100000
+print_energy_every = 100000
+time_scale = linear
+external_forces = 0
+external_forces_file = reqs/KakenhiEvolveDNA/A/r20200904022205/forces_r20200904022205.dat
+
+data_output_1 = {
+	print_every = 10000
+	; name = hb_reqs/KakenhiEvolveDNA/A/r20200904022205/energy_trap_r20200904022205.dat
+	name = reqs/KakenhiEvolveDNA/A/r20200904022205/hb_energy_trap_r20200904022205.dat
+	col_1 = {
+		type = step
+	}
+	col_2 = {
+		type = hb_energy
+	}
+}

@@ -14,8 +14,10 @@ make_seq () {
 }
 
 make_top_conf () {
+    # より小さくしてみる 2から始める
     # BOX_SIZE=100
-    BOX_SIZE=500
+    # BOX_SIZE=500
+    BOX_SIZE=13
     SEQ=$1
     python3 utils/generate-sa-soturon.py $BOX_SIZE $SEQ
 }
@@ -64,7 +66,7 @@ make_input () {
     sed -i -e 's|STEPS|200000|' $INPUTFILE
     # sed -i -e 's|STEPS|2000000|' $INPUTFILE
     # sed -i -e 's|STEPS|100000000|' $INPUTFILE
-    # sed -i -e 's|STEPS|10|' $INPUTFILE
+    # sed -i -e 's|STEPS|100|' $INPUTFILE
     # sed -i -e 's|STEPS|20|' $INPUTFILE
     sed -i -e "s|TEMP|$temperature|" $INPUTFILE
     
@@ -84,7 +86,7 @@ make_input () {
     sed -i -e 's|STEPS|200000|' $SEQDEPFILE
     # sed -i -e 's|STEPS|2000000|' $SEQDEPFILE
     # sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
-    # sed -i -e 's|STEPS|10|' $SEQDEPFILE
+    # sed -i -e 's|STEPS|100|' $SEQDEPFILE
     # sed -i -e 's|STEPS|20|' $SEQDEPFILE
     sed -i -e "s|TEMP|$temperature|" $SEQDEPFILE
 
@@ -105,7 +107,7 @@ make_input () {
     sed -i -e 's|STEPS|200000|' $TRAPFILE
     # sed -i -e 's|STEPS|2000000|' $TRAPFILE
     # sed -i -e 's|STEPS|100000000|' $SEQDEPFILE
-    # sed -i -e 's|STEPS|10|' $SEQDEPFILE
+    # sed -i -e 's|STEPS|100|' $SEQDEPFILE
     # sed -i -e 's|STEPS|20|' $SEQDEPFILE
     sed -i -e "s|TEMP|$temperature|" $TRAPFILE
 
