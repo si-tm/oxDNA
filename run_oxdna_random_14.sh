@@ -52,9 +52,8 @@ if [ -n "$files" ]; then
     # ここにファイルごとの処理を追加
     echo $file
     echo $temperature
-    base=`basaename $file`
-    echo "./run_oxdna_random_11.sh $file/$base $temperature"
-    ./run_oxdna_random_11.sh $file $temperature
+    echo "./run_oxdna_random_13.sh $file $temperature $box_size"
+    ./run_oxdna_random_13.sh $file $temperature $box_size
   done
 else
   echo "No files found in $directory with prefix '$prefix'."
