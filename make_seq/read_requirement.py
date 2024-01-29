@@ -30,7 +30,8 @@ class read_requirement():
         f.close()
     
     def read_structure(self, lst):
-        return lst[lst.index("=") + 1 : lst.index("@initial")]
+        # return lst[lst.index("=") + 1 : lst.index("@initial")]
+        return lst[lst.index("=") + 1 : lst.index("@")]
 
     def seq_reverse(self, str):
         new_str = ""
