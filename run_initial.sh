@@ -157,7 +157,7 @@ for temperature in "${temperatures[@]}"; do
             mkdir "results/"
         fi
 
-        if [ -e "results/$dir_path" ]; 
+        if [ -e "results/$dir_path" ]; then
             echo "results directory exists"
         else
             mkdir -p "results/$dir_path"
