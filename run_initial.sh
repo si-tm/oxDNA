@@ -1,6 +1,10 @@
 #!/bin/bash
 # #!/usr/bin/bash
 
+# Start measuring script execution time
+time_start=$(date +%s)
+
+
 return_input () {
     target_dir=$1"/input_L*"
     echo `ls $1`
@@ -168,3 +172,6 @@ for temperature in "${temperatures[@]}"; do
         rm -rf "results/reqs/"
     done
 done
+
+time_end=$(date +%s)
+echo "Script execution time: $(($time_end - $time_start)) seconds"
