@@ -137,8 +137,8 @@ echo $name
 echo $box_size
 
 # シミュレーションする温度のリスト
-temperatures=(358)
-# temperatures=(277 298 308 318 328 338 348 358)
+# temperatures=(358)
+temperatures=(277 298 308 318 328 338 348 358)
 
 for temperature in "${temperatures[@]}"; do
     for iteration in {1..10}; do
