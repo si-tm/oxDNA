@@ -130,11 +130,9 @@ run_oxdna () {
 }
 
 # requirement temperatureを引数とする
-# req_dir=$1
-req_dir="L1_0"
+req_dir=$1
 req_dir="conf/"$req_dir
 name=$2
-name="r1711781544506-0"
 box_size=$3
 
 echo $name
