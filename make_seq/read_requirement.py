@@ -30,7 +30,8 @@ class read_requirement():
         f.close()
     
     def read_structure(self, lst):
-        # return lst[lst.index("=") + 1 : lst.index("@initial")]
+        if "@initial" in lst:
+            return lst[lst.index("=") + 1 : lst.index("@initial")]
         return lst[lst.index("=") + 1 : lst.index("@")]
 
     def seq_reverse(self, str):
@@ -42,7 +43,7 @@ class read_requirement():
 
     def make_seq(self):
         seq_path =  "/".join(self.req_dic["req_path"].split("/")[:-1]) + "/seq_" + "".join(self.req_dic["req_path"].split("/")[-1])
-        print(seq_path)
+        print(seq_path) #消さない
         if os.path.isfile(seq_path) == False:
             num_of_strand = 5
             f = open(seq_path, "w")

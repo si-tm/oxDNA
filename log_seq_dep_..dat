@@ -1,0 +1,9 @@
+INFO: seeding the RNG with 42
+INFO: Initializing backend 
+INFO: Simulation type: VMMC
+INFO: The generator will try to take into account bonded interactions by choosing distances between bonded neighbours no larger than 2.000000
+INFO: Using 'oxDNA1_sequence_dependent_parameters.txt' as the input for sequence-dependent values
+INFO: Aggregated I/O statistics (set debug=1 for file-wise information)
+	  0.000  B written to files
+	  0.000  B written to stdout/stderr
+ERROR: The temperature should be between 0° C and 100° C. The value specified in the input file is -273.150000° C. If you really want to use this value set "T_force_value = true"

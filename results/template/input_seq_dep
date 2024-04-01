@@ -25,7 +25,7 @@ use_average_seq = 0
 ; seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt
 seq_dep_file = oxDNA1_sequence_dependent_parameters.txt
 
-T = 334 K
+T = 298 K
 dt = 0.003
 verlet_skin = 0.5
 
