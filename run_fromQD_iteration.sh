@@ -134,6 +134,7 @@ req_dir=$1
 req_dir="conf/"$req_dir
 name=$2
 box_size=$3
+iteration=$4
 
 echo $name
 echo $box_size
@@ -143,10 +144,8 @@ echo $box_size
 temperatures=(277 298 308 318 328 338 348 358)
 
 # for temperature in "${temperatures[@]}"; do
-# reqから温度を引き出す
-temperature=
 
-for iteration in {1..10}; do
+for temperature in "${temperatures[@]}"; do
     req_name="${req_dir}/${name}_${temperature}_${iteration}/req_${name}_${temperature}_${iteration}.txt"
     mkdir "${req_dir}/${name}_${temperature}_${iteration}"
     cp "${req_dir}/req_${name}.txt" $req_name
@@ -173,9 +172,7 @@ for iteration in {1..10}; do
 
     cp -r $dir_path "results/"
     rm -rf "results/reqs/"
-    
 done
-# done
 
 time_end=$(date +%s)
 echo "Script execution time: $(($time_end - $time_start)) seconds"
