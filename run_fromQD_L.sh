@@ -12,10 +12,11 @@ pattern='_[^.]*.'
 for req in $req_lst
 do
     if [[ $req == r* ]]; then
-        echo $req
+        # echo $req
         if [[ $req =~ _([^_.]+)\. ]]; then
             extracted_string="${BASH_REMATCH[1]}"
-            echo "抽出された文字列は: $extracted_string"
+            # echo "抽出された文字列は: $extracted_string"
+            echo "$extracted_string"
             ./run_fromQD.sh $target $extracted_string $box_size
         else
             echo "該当するパターンが見つかりませんでした。"

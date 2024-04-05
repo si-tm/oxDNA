@@ -129,6 +129,8 @@ run_oxdna () {
     fi
 }
 
+# ./run_fromQD_r.sh L1_1 r1712111321323-98 25
+
 # requirement temperatureを引数とする
 req_dir=$1
 req_dir="conf/"$req_dir
