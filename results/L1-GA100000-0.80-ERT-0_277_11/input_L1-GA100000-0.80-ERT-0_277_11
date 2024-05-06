@@ -9,7 +9,7 @@ seed = 42
 ####    SIM PARAMETERS    ####
 ##############################
 # steps = 10
-steps = STEPS
+steps = 200000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -20,33 +20,33 @@ delta_translation = 0.22
 delta_rotation = 0.22
 
 #T = 334 K
-T = TEMP K
+T = 277 K
 dt = 0.003
 verlet_skin = 0.5
 
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = TOP
-conf_file = CONF
-lastconf_file = last_conf.dat
-trajectory_file = trajectory.dat
+topology = conf/L1-GA100000-0.80-ERT-0_277_11/generated_L1-GA100000-0.80-ERT-0_277_11.top
+conf_file = conf/L1-GA100000-0.80-ERT-0_277_11/generated_L1-GA100000-0.80-ERT-0_277_11.dat
+lastconf_file = conf/L1-GA100000-0.80-ERT-0_277_11/last_conf_L1-GA100000-0.80-ERT-0_277_11.dat.dat
+trajectory_file = conf/L1-GA100000-0.80-ERT-0_277_11/trajectory_L1-GA100000-0.80-ERT-0_277_11.dat
 refresh_vel = 1
-log_file = log.dat
+log_file = conf/L1-GA100000-0.80-ERT-0_277_11/log_L1-GA100000-0.80-ERT-0_277_11.dat
 no_stdout_energy = 1
 restart_step_counter = 1
-energy_file = energy.dat
+energy_file = conf/L1-GA100000-0.80-ERT-0_277_11/energy_L1-GA100000-0.80-ERT-0_277_11.dat
 #print_conf_interval = 100000000
 # print_conf_interval = 100000
 # print_energy_every = 100000
-print_conf_interval = ISTEPS
-print_energy_every = ISTEPS
+print_conf_interval = 20000
+print_energy_every = 20000
 time_scale = linear
 external_forces = 0
 
 data_output_1 = {
 	print_every = 10000
-	name = hb.dat
+	name = conf/L1-GA100000-0.80-ERT-0_277_11/hb_L1-GA100000-0.80-ERT-0_277_11.dat
 	col_1 = {
 		type = step
 	}

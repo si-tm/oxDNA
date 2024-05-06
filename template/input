@@ -36,8 +36,10 @@ no_stdout_energy = 1
 restart_step_counter = 1
 energy_file = energy.dat
 ;print_conf_interval = 100000000
-print_conf_interval = 100000
-print_energy_every = 100000
+; print_conf_interval = 100000
+; print_energy_every = 100000
+print_conf_interval = 10
+print_energy_every = 10
 time_scale = linear
 external_forces = 0
 

@@ -25,34 +25,35 @@ use_average_seq = 0
 ; seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt
 seq_dep_file = oxDNA1_sequence_dependent_parameters.txt
 
-T = 298 K
+; T = 334 K
+T = TEMP K
 dt = 0.003
 verlet_skin = 0.5
 
 ##############################
 ####    INPUT / OUTPUT    ####
 ##############################
-topology = TOP
-conf_file = CONF
-lastconf_file = last_conf_seq_dep.dat
-trajectory_file = trajectory_seq_dep.dat
+topology = conf/L1-GA100000-0.80-ERT-0_277_11/generated_L1-GA100000-0.80-ERT-0_277_11.top
+conf_file = conf/L1-GA100000-0.80-ERT-0_277_11/generated_L1-GA100000-0.80-ERT-0_277_11.dat
+lastconf_file = conf/L1-GA100000-0.80-ERT-0_277_11/last_conf_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
+trajectory_file = conf/L1-GA100000-0.80-ERT-0_277_11/trajectory_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
 refresh_vel = 1
-log_file = log_seq_dep.dat
+log_file = conf/L1-GA100000-0.80-ERT-0_277_11/log_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
 no_stdout_energy = 1
 restart_step_counter = 1
-energy_file = energy_seq_dep.dat
+energy_file = conf/L1-GA100000-0.80-ERT-0_277_11/energy_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
 ;print_conf_interval = 100000000
 ; print_conf_interval = 100000
 ; print_energy_every = 100000
-print_conf_interval = 10
-print_energy_every = 10
+print_conf_interval = 20000
+print_energy_every = 20000
 time_scale = linear
 external_forces = 0
 
 data_output_1 = {
 	print_every = 10000
-	; name = hb_energy_seq_dep.dat
-	name = hb_seq_dep.dat
+	; name = hb_conf/L1-GA100000-0.80-ERT-0_277_11/energy_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
+	name = conf/L1-GA100000-0.80-ERT-0_277_11/hb_energy_seq_dep_L1-GA100000-0.80-ERT-0_277_11.dat
 	col_1 = {
 		type = step
 	}

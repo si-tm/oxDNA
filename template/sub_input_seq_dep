@@ -43,8 +43,10 @@ no_stdout_energy = 1
 restart_step_counter = 1
 energy_file = energy_seq_dep.dat
 ;print_conf_interval = 100000000
-print_conf_interval = 100000
-print_energy_every = 100000
+; print_conf_interval = 100000
+; print_energy_every = 100000
+print_conf_interval = ISTEPS
+print_energy_every = ISTEPS
 time_scale = linear
 external_forces = 0
 
