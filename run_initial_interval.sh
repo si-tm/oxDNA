@@ -35,8 +35,8 @@ make_input () {
     echo $temperature
     echo "wow"
 
-    steps=200000
-    interval_steps=20000
+    steps=1000000
+    interval_steps=$steps/10
 
     # テンプレートの用意
     # dir_path : temperature
