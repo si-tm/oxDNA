@@ -87,7 +87,7 @@ make_input () {
     sed -i -e "s|CONF|$CONFFILE|" $SEQDEPFILE
     sed -i 's|seq_dep_file = ../oxDNA1_sequence_dependent_parameters.txt|seq_dep_file = oxDNA1_sequence_dependent_parameters.txt' $SEQDEPFILE
     # sed -i -e 's|STEPS|200000|' $SEQDEPFILE
-    sed -i -e "s|STEPS|$steps|" $INPUTFILE
+    sed -i -e "s|STEPS|$steps|" $SEQDEPFILE
     sed -i -e "s|TEMP|$temperature|" $SEQDEPFILE
 
     # echo "$TRAPFILE fix"
@@ -105,7 +105,7 @@ make_input () {
     sed -i -e "s|FORCE|${FORCESFILE}|" $TRAPFILE
     sed -i -e 's|external_forces = 1|external_forces = 0|' $TRAPFILE # forceファイルを使わない設定
     # sed -i -e 's|STEPS|200000|' $TRAPFILE
-    sed -i -e "s|STEPS|$steps|" $INPUTFILE
+    sed -i -e "s|STEPS|$steps|" $TRAPFILE
     sed -i -e "s|TEMP|$temperature|" $TRAPFILE
 
 }

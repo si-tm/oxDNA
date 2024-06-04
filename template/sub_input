@@ -8,7 +8,6 @@ seed = 42
 ##############################
 ####    SIM PARAMETERS    ####
 ##############################
-# steps = 10
 steps = STEPS
 newtonian_steps = 103
 diff_coeff = 2.50
@@ -19,7 +18,6 @@ ensemble = nvt
 delta_translation = 0.22
 delta_rotation = 0.22
 
-#T = 334 K
 T = TEMP K
 dt = 0.003
 verlet_skin = 0.5
@@ -36,9 +34,6 @@ log_file = log.dat
 no_stdout_energy = 1
 restart_step_counter = 1
 energy_file = energy.dat
-#print_conf_interval = 100000000
-# print_conf_interval = 100000
-# print_energy_every = 100000
 print_conf_interval = ISTEPS
 print_energy_every = ISTEPS
 time_scale = linear
