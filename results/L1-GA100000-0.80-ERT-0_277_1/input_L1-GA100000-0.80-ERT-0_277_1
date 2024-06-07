@@ -8,8 +8,7 @@ seed = 42
 ##############################
 ####    SIM PARAMETERS    ####
 ##############################
-; steps = 10
-steps = 20
+steps = 1000000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -19,7 +18,6 @@ ensemble = nvt
 delta_translation = 0.22
 delta_rotation = 0.22
 
-; T = 334 K
 T = 277 K
 dt = 0.003
 verlet_skin = 0.5
@@ -36,7 +34,6 @@ log_file = conf/L1-GA100000-0.80-ERT-0_277_1/log_L1-GA100000-0.80-ERT-0_277_1.da
 no_stdout_energy = 1
 restart_step_counter = 1
 energy_file = conf/L1-GA100000-0.80-ERT-0_277_1/energy_L1-GA100000-0.80-ERT-0_277_1.dat
-;print_conf_interval = 100000000
 print_conf_interval = 100000
 print_energy_every = 100000
 time_scale = linear

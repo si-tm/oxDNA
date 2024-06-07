@@ -425,3 +425,73 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:96 (CHECK_CXX_COMPILER_FLAG)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_MARCH_NATIVE"
+    directories:
+      source: "/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-1OYH3R"
+      binary: "/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-1OYH3R"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -D_FORCE_INLINES"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.2"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_MARCH_NATIVE"
+      cached: true
+      stdout: |
+        Change Dir: /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-1OYH3R
+        
+        Run Build Command(s):/Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e86b8/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e86b8.dir/build.make CMakeFiles/cmTC_e86b8.dir/build
+        Building CXX object CMakeFiles/cmTC_e86b8.dir/src.cxx.o
+        /Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORTS_MARCH_NATIVE  -D_FORCE_INLINES  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2   -march=native -MD -MT CMakeFiles/cmTC_e86b8.dir/src.cxx.o -MF CMakeFiles/cmTC_e86b8.dir/src.cxx.o.d -o CMakeFiles/cmTC_e86b8.dir/src.cxx.o -c /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-1OYH3R/src.cxx
+        Linking CXX executable cmTC_e86b8
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e86b8.dir/link.txt --verbose=1
+        /Library/Developer/CommandLineTools/usr/bin/c++  -D_FORCE_INLINES  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_e86b8.dir/src.cxx.o -o cmTC_e86b8 
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/Applications/CMake.app/Contents/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:96 (CHECK_CXX_COMPILER_FLAG)"
+    checks:
+      - "Performing Test COMPILER_SUPPORTS_MARCH_NATIVE"
+    directories:
+      source: "/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-RMMgnN"
+      binary: "/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-RMMgnN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: " -D_FORCE_INLINES"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.2"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "COMPILER_SUPPORTS_MARCH_NATIVE"
+      cached: true
+      stdout: |
+        Change Dir: /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-RMMgnN
+        
+        Run Build Command(s):/Applications/CMake.app/Contents/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eac0d/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_eac0d.dir/build.make CMakeFiles/cmTC_eac0d.dir/build
+        Building CXX object CMakeFiles/cmTC_eac0d.dir/src.cxx.o
+        /Library/Developer/CommandLineTools/usr/bin/c++ -DCOMPILER_SUPPORTS_MARCH_NATIVE  -D_FORCE_INLINES  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2   -march=native -MD -MT CMakeFiles/cmTC_eac0d.dir/src.cxx.o -MF CMakeFiles/cmTC_eac0d.dir/src.cxx.o.d -o CMakeFiles/cmTC_eac0d.dir/src.cxx.o -c /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles/CMakeScratch/TryCompile-RMMgnN/src.cxx
+        Linking CXX executable cmTC_eac0d
+        /Applications/CMake.app/Contents/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eac0d.dir/link.txt --verbose=1
+        /Library/Developer/CommandLineTools/usr/bin/c++  -D_FORCE_INLINES  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_eac0d.dir/src.cxx.o -o cmTC_eac0d 
+        
+      exitCode: 0
+...

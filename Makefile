@@ -1092,6 +1092,19 @@ DetailedPolymerSwapInteraction/fast:
 .PHONY : DetailedPolymerSwapInteraction/fast
 
 #=============================================================================
+# Target rules for targets named NathanNeighs
+
+# Build rule for target.
+NathanNeighs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 NathanNeighs
+.PHONY : NathanNeighs
+
+# fast build rule for target.
+NathanNeighs/fast:
+	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build
+.PHONY : NathanNeighs/fast
+
+#=============================================================================
 # Target rules for targets named tostiguerra
 
 # Build rule for target.
@@ -1177,6 +1190,7 @@ help:
 	@echo "... MGInteraction"
 	@echo "... MicrogelElasticity"
 	@echo "... NDepletion"
+	@echo "... NathanNeighs"
 	@echo "... NematicS"
 	@echo "... PLCluster"
 	@echo "... PatchyBonds"

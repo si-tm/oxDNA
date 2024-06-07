@@ -620,6 +620,20 @@ DetailedPolymerSwapInteraction/fast:
 	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/build.make contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/build
 .PHONY : DetailedPolymerSwapInteraction/fast
 
+# Convenience name for target.
+contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule:
+	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule
+.PHONY : contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule
+
+# Convenience name for target.
+NathanNeighs: contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule
+.PHONY : NathanNeighs
+
+# fast build rule for target.
+NathanNeighs/fast:
+	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build
+.PHONY : NathanNeighs/fast
+
 src/Interactions/AOInteraction.o: src/Interactions/AOInteraction.cpp.o
 .PHONY : src/Interactions/AOInteraction.o
 
@@ -1313,6 +1327,30 @@ src/Observables/MicrogelElasticity.cpp.s:
 	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/build.make contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/src/Observables/MicrogelElasticity.cpp.s
 .PHONY : src/Observables/MicrogelElasticity.cpp.s
 
+src/Observables/NathanNeighs.o: src/Observables/NathanNeighs.cpp.o
+.PHONY : src/Observables/NathanNeighs.o
+
+# target to build an object file
+src/Observables/NathanNeighs.cpp.o:
+	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/src/Observables/NathanNeighs.cpp.o
+.PHONY : src/Observables/NathanNeighs.cpp.o
+
+src/Observables/NathanNeighs.i: src/Observables/NathanNeighs.cpp.i
+.PHONY : src/Observables/NathanNeighs.i
+
+# target to preprocess a source file
+src/Observables/NathanNeighs.cpp.i:
+	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/src/Observables/NathanNeighs.cpp.i
+.PHONY : src/Observables/NathanNeighs.cpp.i
+
+src/Observables/NathanNeighs.s: src/Observables/NathanNeighs.cpp.s
+.PHONY : src/Observables/NathanNeighs.s
+
+# target to generate assembly for a file
+src/Observables/NathanNeighs.cpp.s:
+	cd /Users/hyakuzukamaya/Desktop/lab/oxDNA && $(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/src/Observables/NathanNeighs.cpp.s
+.PHONY : src/Observables/NathanNeighs.cpp.s
+
 src/Observables/PatchyBonds.o: src/Observables/PatchyBonds.cpp.o
 .PHONY : src/Observables/PatchyBonds.o
 
@@ -1511,6 +1549,7 @@ help:
 	@echo "... MGAssemblyConf"
 	@echo "... MGInteraction"
 	@echo "... MicrogelElasticity"
+	@echo "... NathanNeighs"
 	@echo "... PatchyBonds"
 	@echo "... PatchySwapInteraction"
 	@echo "... PolydisperseLTInteraction"
@@ -1609,6 +1648,9 @@ help:
 	@echo "... src/Observables/MicrogelElasticity.o"
 	@echo "... src/Observables/MicrogelElasticity.i"
 	@echo "... src/Observables/MicrogelElasticity.s"
+	@echo "... src/Observables/NathanNeighs.o"
+	@echo "... src/Observables/NathanNeighs.i"
+	@echo "... src/Observables/NathanNeighs.s"
 	@echo "... src/Observables/PatchyBonds.o"
 	@echo "... src/Observables/PatchyBonds.i"
 	@echo "... src/Observables/PatchyBonds.s"

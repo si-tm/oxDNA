@@ -215,6 +215,7 @@ contrib/rovigatti/clean: contrib/rovigatti/CMakeFiles/PolymerSwapInteraction.dir
 contrib/rovigatti/clean: contrib/rovigatti/CMakeFiles/PatchySwapInteraction.dir/clean
 contrib/rovigatti/clean: contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/clean
 contrib/rovigatti/clean: contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/clean
+contrib/rovigatti/clean: contrib/rovigatti/CMakeFiles/NathanNeighs.dir/clean
 .PHONY : contrib/rovigatti/clean
 
 #=============================================================================
@@ -276,12 +277,12 @@ src/clean: src/CMakeFiles/confGenerator.dir/clean
 CMakeFiles/docs.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/docs.dir/build.make CMakeFiles/docs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target docs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=47 "Built target docs"
 .PHONY : CMakeFiles/docs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/docs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/docs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : CMakeFiles/docs.dir/rule
@@ -550,7 +551,7 @@ contrib/romano/CMakeFiles/romano.dir/all: contrib/romano/CMakeFiles/SideChange.d
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/romano.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/romano.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/romano.dir/rule
@@ -597,12 +598,12 @@ contrib/romano/CMakeFiles/ClosestN.dir/clean:
 contrib/romano/CMakeFiles/NematicS.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/NematicS.dir/build.make contrib/romano/CMakeFiles/NematicS.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/NematicS.dir/build.make contrib/romano/CMakeFiles/NematicS.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target NematicS"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=32 "Built target NematicS"
 .PHONY : contrib/romano/CMakeFiles/NematicS.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/NematicS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/NematicS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/NematicS.dir/rule
@@ -675,12 +676,12 @@ contrib/romano/CMakeFiles/FreeVolume.dir/clean:
 contrib/romano/CMakeFiles/PLCluster.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PLCluster.dir/build.make contrib/romano/CMakeFiles/PLCluster.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PLCluster.dir/build.make contrib/romano/CMakeFiles/PLCluster.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=32,33 "Built target PLCluster"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=33 "Built target PLCluster"
 .PHONY : contrib/romano/CMakeFiles/PLCluster.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/PLCluster.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/PLCluster.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/PLCluster.dir/rule
@@ -883,7 +884,7 @@ contrib/romano/CMakeFiles/HardIcoInteraction.dir/clean:
 contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/build.make contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/build.make contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=34 "Built target PatchyShapeInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=35 "Built target PatchyShapeInteraction"
 .PHONY : contrib/romano/CMakeFiles/PatchyShapeInteraction.dir/all
 
 # Build rule for subdir invocation for target.
@@ -987,12 +988,12 @@ contrib/romano/CMakeFiles/Swim.dir/clean:
 contrib/romano/CMakeFiles/Reappear.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Reappear.dir/build.make contrib/romano/CMakeFiles/Reappear.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Reappear.dir/build.make contrib/romano/CMakeFiles/Reappear.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=39 "Built target Reappear"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target Reappear"
 .PHONY : contrib/romano/CMakeFiles/Reappear.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/Reappear.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/Reappear.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/Reappear.dir/rule
@@ -1013,12 +1014,12 @@ contrib/romano/CMakeFiles/Reappear.dir/clean:
 contrib/romano/CMakeFiles/SideChange.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/SideChange.dir/build.make contrib/romano/CMakeFiles/SideChange.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/SideChange.dir/build.make contrib/romano/CMakeFiles/SideChange.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target SideChange"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=41 "Built target SideChange"
 .PHONY : contrib/romano/CMakeFiles/SideChange.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/SideChange.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/SideChange.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/SideChange.dir/rule
@@ -1091,12 +1092,12 @@ contrib/romano/CMakeFiles/NDepletion.dir/clean:
 contrib/romano/CMakeFiles/CutVolume.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/CutVolume.dir/build.make contrib/romano/CMakeFiles/CutVolume.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/CutVolume.dir/build.make contrib/romano/CMakeFiles/CutVolume.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target CutVolume"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=9 "Built target CutVolume"
 .PHONY : contrib/romano/CMakeFiles/CutVolume.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/CutVolume.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/CutVolume.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/CutVolume.dir/rule
@@ -1143,12 +1144,12 @@ contrib/romano/CMakeFiles/Grow.dir/clean:
 contrib/romano/CMakeFiles/Exhaust.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Exhaust.dir/build.make contrib/romano/CMakeFiles/Exhaust.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Exhaust.dir/build.make contrib/romano/CMakeFiles/Exhaust.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=18 "Built target Exhaust"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target Exhaust"
 .PHONY : contrib/romano/CMakeFiles/Exhaust.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/Exhaust.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/Exhaust.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/Exhaust.dir/rule
@@ -1169,12 +1170,12 @@ contrib/romano/CMakeFiles/Exhaust.dir/clean:
 contrib/romano/CMakeFiles/DepletionVolume.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/DepletionVolume.dir/build.make contrib/romano/CMakeFiles/DepletionVolume.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/DepletionVolume.dir/build.make contrib/romano/CMakeFiles/DepletionVolume.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=13 "Built target DepletionVolume"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target DepletionVolume"
 .PHONY : contrib/romano/CMakeFiles/DepletionVolume.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/DepletionVolume.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/DepletionVolume.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/DepletionVolume.dir/rule
@@ -1221,12 +1222,12 @@ contrib/romano/CMakeFiles/AVBDepletion.dir/clean:
 contrib/romano/CMakeFiles/Swap.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Swap.dir/build.make contrib/romano/CMakeFiles/Swap.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/Swap.dir/build.make contrib/romano/CMakeFiles/Swap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=42 "Built target Swap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target Swap"
 .PHONY : contrib/romano/CMakeFiles/Swap.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/Swap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/Swap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/Swap.dir/rule
@@ -1247,12 +1248,12 @@ contrib/romano/CMakeFiles/Swap.dir/clean:
 contrib/romano/CMakeFiles/PatchyShapeParticle.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PatchyShapeParticle.dir/build.make contrib/romano/CMakeFiles/PatchyShapeParticle.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/romano/CMakeFiles/PatchyShapeParticle.dir/build.make contrib/romano/CMakeFiles/PatchyShapeParticle.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=35 "Built target PatchyShapeParticle"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target PatchyShapeParticle"
 .PHONY : contrib/romano/CMakeFiles/PatchyShapeParticle.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/romano/CMakeFiles/PatchyShapeParticle.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/romano/CMakeFiles/PatchyShapeParticle.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/romano/CMakeFiles/PatchyShapeParticle.dir/rule
@@ -1338,7 +1339,7 @@ contrib/rovigatti/CMakeFiles/rovigatti.dir/all: contrib/rovigatti/CMakeFiles/Det
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/rovigatti.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/rovigatti.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/rovigatti.dir/rule
@@ -1385,12 +1386,12 @@ contrib/rovigatti/CMakeFiles/Bonds.dir/clean:
 contrib/rovigatti/CMakeFiles/PatchyBonds.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PatchyBonds.dir/build.make contrib/rovigatti/CMakeFiles/PatchyBonds.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PatchyBonds.dir/build.make contrib/rovigatti/CMakeFiles/PatchyBonds.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target PatchyBonds"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=34 "Built target PatchyBonds"
 .PHONY : contrib/rovigatti/CMakeFiles/PatchyBonds.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/PatchyBonds.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/PatchyBonds.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/PatchyBonds.dir/rule
@@ -1463,12 +1464,12 @@ contrib/rovigatti/CMakeFiles/EmptyVolume.dir/clean:
 contrib/rovigatti/CMakeFiles/FSConf.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/FSConf.dir/build.make contrib/rovigatti/CMakeFiles/FSConf.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/FSConf.dir/build.make contrib/rovigatti/CMakeFiles/FSConf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target FSConf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=18 "Built target FSConf"
 .PHONY : contrib/rovigatti/CMakeFiles/FSConf.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/FSConf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/FSConf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/FSConf.dir/rule
@@ -1515,12 +1516,12 @@ contrib/rovigatti/CMakeFiles/Gyradius.dir/clean:
 contrib/rovigatti/CMakeFiles/StarrConf.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/StarrConf.dir/build.make contrib/rovigatti/CMakeFiles/StarrConf.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/StarrConf.dir/build.make contrib/rovigatti/CMakeFiles/StarrConf.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=41 "Built target StarrConf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target StarrConf"
 .PHONY : contrib/rovigatti/CMakeFiles/StarrConf.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/StarrConf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/StarrConf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/StarrConf.dir/rule
@@ -1541,12 +1542,12 @@ contrib/rovigatti/CMakeFiles/StarrConf.dir/clean:
 contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/build.make contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/build.make contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target TSPAnalysis"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=44 "Built target TSPAnalysis"
 .PHONY : contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/TSPAnalysis.dir/rule
@@ -1593,12 +1594,12 @@ contrib/rovigatti/CMakeFiles/Widom.dir/clean:
 contrib/rovigatti/CMakeFiles/LevyDelta.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/LevyDelta.dir/build.make contrib/rovigatti/CMakeFiles/LevyDelta.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/LevyDelta.dir/build.make contrib/rovigatti/CMakeFiles/LevyDelta.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=26 "Built target LevyDelta"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target LevyDelta"
 .PHONY : contrib/rovigatti/CMakeFiles/LevyDelta.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/LevyDelta.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/LevyDelta.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/LevyDelta.dir/rule
@@ -1723,12 +1724,12 @@ contrib/rovigatti/CMakeFiles/GenericGrByInsertion.dir/clean:
 contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/build.make contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/build.make contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target RadialDensityProfile"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=39 "Built target RadialDensityProfile"
 .PHONY : contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/RadialDensityProfile.dir/rule
@@ -1775,12 +1776,12 @@ contrib/rovigatti/CMakeFiles/MGAnalysis.dir/clean:
 contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/build.make contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/build.make contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target MicrogelElasticity"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=30 "Built target MicrogelElasticity"
 .PHONY : contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/rule
@@ -1801,12 +1802,12 @@ contrib/rovigatti/CMakeFiles/MicrogelElasticity.dir/clean:
 contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/build.make contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/build.make contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=9 "Built target ConstructwisePressure"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target ConstructwisePressure"
 .PHONY : contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/ConstructwisePressure.dir/rule
@@ -1879,12 +1880,12 @@ contrib/rovigatti/CMakeFiles/MGAssemblyConf.dir/clean:
 contrib/rovigatti/CMakeFiles/TSPInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/TSPInteraction.dir/build.make contrib/rovigatti/CMakeFiles/TSPInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/TSPInteraction.dir/build.make contrib/rovigatti/CMakeFiles/TSPInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=44 "Built target TSPInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target TSPInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/TSPInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/TSPInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/TSPInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/TSPInteraction.dir/rule
@@ -1905,12 +1906,12 @@ contrib/rovigatti/CMakeFiles/TSPInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/build.make contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/build.make contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=37 "Built target PolymerInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target PolymerInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/PolymerInteraction.dir/rule
@@ -1983,12 +1984,12 @@ contrib/rovigatti/CMakeFiles/GraftedInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/mWInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/mWInteraction.dir/build.make contrib/rovigatti/CMakeFiles/mWInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/mWInteraction.dir/build.make contrib/rovigatti/CMakeFiles/mWInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=47 "Built target mWInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target mWInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/mWInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/mWInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/mWInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/mWInteraction.dir/rule
@@ -2009,12 +2010,12 @@ contrib/rovigatti/CMakeFiles/mWInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/StarrInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/StarrInteraction.dir/build.make contrib/rovigatti/CMakeFiles/StarrInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/StarrInteraction.dir/build.make contrib/rovigatti/CMakeFiles/StarrInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target StarrInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=42 "Built target StarrInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/StarrInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/StarrInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/StarrInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/StarrInteraction.dir/rule
@@ -2061,12 +2062,12 @@ contrib/rovigatti/CMakeFiles/CPMixtureInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/LevyInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/LevyInteraction.dir/build.make contrib/rovigatti/CMakeFiles/LevyInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/LevyInteraction.dir/build.make contrib/rovigatti/CMakeFiles/LevyInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target LevyInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=26 "Built target LevyInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/LevyInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/LevyInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/LevyInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/LevyInteraction.dir/rule
@@ -2087,12 +2088,12 @@ contrib/rovigatti/CMakeFiles/LevyInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/MGInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/MGInteraction.dir/build.make contrib/rovigatti/CMakeFiles/MGInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/MGInteraction.dir/build.make contrib/rovigatti/CMakeFiles/MGInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=30 "Built target MGInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target MGInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/MGInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/MGInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/MGInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/MGInteraction.dir/rule
@@ -2139,12 +2140,12 @@ contrib/rovigatti/CMakeFiles/AOInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/build.make contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/build.make contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target PolydisperseLTInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=37 "Built target PolydisperseLTInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/PolydisperseLTInteraction.dir/rule
@@ -2217,12 +2218,12 @@ contrib/rovigatti/CMakeFiles/PatchySwapInteraction.dir/clean:
 contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/all:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/build.make contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/depend
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/build.make contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target DetailedPatchySwapInteraction"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num=13 "Built target DetailedPatchySwapInteraction"
 .PHONY : contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/all
 
 # Build rule for subdir invocation for target.
 contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 1
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
 .PHONY : contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir/rule
@@ -2261,6 +2262,32 @@ DetailedPolymerSwapInteraction: contrib/rovigatti/CMakeFiles/DetailedPolymerSwap
 contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/clean:
 	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/build.make contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/clean
 .PHONY : contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir/clean
+
+#=============================================================================
+# Target rules for target contrib/rovigatti/CMakeFiles/NathanNeighs.dir
+
+# All Build rule for target.
+contrib/rovigatti/CMakeFiles/NathanNeighs.dir/all:
+	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/depend
+	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles --progress-num= "Built target NathanNeighs"
+.PHONY : contrib/rovigatti/CMakeFiles/NathanNeighs.dir/all
+
+# Build rule for subdir invocation for target.
+contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contrib/rovigatti/CMakeFiles/NathanNeighs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hyakuzukamaya/Desktop/lab/oxDNA/CMakeFiles 0
+.PHONY : contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule
+
+# Convenience name for target.
+NathanNeighs: contrib/rovigatti/CMakeFiles/NathanNeighs.dir/rule
+.PHONY : NathanNeighs
+
+# clean rule for target.
+contrib/rovigatti/CMakeFiles/NathanNeighs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f contrib/rovigatti/CMakeFiles/NathanNeighs.dir/build.make contrib/rovigatti/CMakeFiles/NathanNeighs.dir/clean
+.PHONY : contrib/rovigatti/CMakeFiles/NathanNeighs.dir/clean
 
 #=============================================================================
 # Target rules for target contrib/tostiguerra/CMakeFiles/tostiguerra.dir

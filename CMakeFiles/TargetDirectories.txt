@@ -83,6 +83,7 @@
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/PatchySwapInteraction.dir
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/DetailedPatchySwapInteraction.dir
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/DetailedPolymerSwapInteraction.dir
+/Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/NathanNeighs.dir
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/edit_cache.dir
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/rovigatti/CMakeFiles/rebuild_cache.dir
 /Users/hyakuzukamaya/Desktop/lab/oxDNA/contrib/tostiguerra/CMakeFiles/tostiguerra.dir
