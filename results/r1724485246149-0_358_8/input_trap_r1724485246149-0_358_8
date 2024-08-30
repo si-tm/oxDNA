@@ -1,0 +1,50 @@
+##############################
+####  PROGRAM PARAMETERS  ####
+##############################
+sim_type = VMMC
+backend = CPU
+seed = 42
+
+##############################
+####    SIM PARAMETERS    ####
+##############################
+steps = 10
+
+list_type = cells
+ensemble = nvt
+delta_translation = 0.22
+delta_rotation = 0.22
+
+T = 358 K
+dt = 0.003
+verlet_skin = 0.5
+
+##############################
+####    INPUT / OUTPUT    ####
+##############################
+topology = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/generated_r1724485246149-0_358_8.top
+conf_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/generated_r1724485246149-0_358_8.dat
+lastconf_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/last_conf_trap_r1724485246149-0_358_8.dat
+trajectory_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/trajectory_trap_r1724485246149-0_358_8.dat
+refresh_vel = 1
+log_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/log_trap_r1724485246149-0_358_8.dat
+no_stdout_energy = 1
+restart_step_counter = 1
+energy_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/energy_trap_r1724485246149-0_358_8.dat
+print_conf_interval = 1
+print_energy_every = 1
+time_scale = linear
+external_forces = 0
+external_forces_file = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/forces_r1724485246149-0_358_8.dat
+
+data_output_1 = {
+	print_every = 10000
+	; name = hb_conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/energy_trap_r1724485246149-0_358_8.dat
+	name = conf/req_L3_1/r1724485246149-0/r1724485246149-0_358_8/hb_energy_trap_r1724485246149-0_358_8.dat
+	col_1 = {
+		type = step
+	}
+	col_2 = {
+		type = hb_energy
+	}
+}

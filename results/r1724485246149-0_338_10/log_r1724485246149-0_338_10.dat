@@ -1,0 +1,11 @@
+INFO: seeding the RNG with 42
+INFO: Initializing backend 
+INFO: Simulation type: VMMC
+INFO: The generator will try to take into account bonded interactions by choosing distances between bonded neighbours no larger than 2.000000
+INFO: Converting temperature from Kelvin (338.000000 K) to simulation units (0.112667)
+INFO: Temperature change detected (new temperature: 64.85 C, 338.00 K), re-initialising the DNA interaction
+INFO: pid: 9086
+INFO: Aggregated I/O statistics (set debug=1 for file-wise information)
+	  0.000  B written to files
+	  0.000  B written to stdout/stderr
+ERROR: Can't read configuration file 'conf/req_L3_1/r1724485246149-0/r1724485246149-0_338_10/generated_r1724485246149-0_338_10.dat'
