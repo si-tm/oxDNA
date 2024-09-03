@@ -8,7 +8,7 @@ seed = 42
 ##############################
 ####    SIM PARAMETERS    ####
 ##############################
-steps = 10
+steps = 5000000
 newtonian_steps = 103
 diff_coeff = 2.50
 thermostat = john
@@ -37,8 +37,8 @@ log_file = conf/req_L3_1/r1724485246149-0-394/r1724485246149-0-394_277_1/log_seq
 no_stdout_energy = 1
 restart_step_counter = 1
 energy_file = conf/req_L3_1/r1724485246149-0-394/r1724485246149-0-394_277_1/energy_seq_dep_r1724485246149-0-394_277_1.dat
-print_conf_interval = 1
-print_energy_every = 1
+print_conf_interval = 500000
+print_energy_every = 500000
 time_scale = linear
 external_forces = 0
 
