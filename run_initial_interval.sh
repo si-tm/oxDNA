@@ -148,7 +148,8 @@ echo $box_size
 
 # シミュレーションする温度のリスト
 # temperatures=(358)
-temperatures=(277 298 308 318 328 338 348 358)
+temperatures=(277 308 328 358)
+# temperatures=(277 298 308 318 328 338 348 358)
 # temperatures=(277)
 
 for temperature in "${temperatures[@]}"; do
