@@ -28,6 +28,8 @@ make_input () {
     dir_path=$1
     target=$2
     temperature=$3
+    step=$4
+    interval_step=$5
 
     echo "wow"
     echo $dir_path
@@ -35,8 +37,8 @@ make_input () {
     echo $temperature
     echo "wow"
 
-    steps=5000000
-    interval_steps=500000
+    steps=$step
+    interval_steps=$interval_step
 
     # テンプレートの用意
     # dir_path : temperature
@@ -143,13 +145,15 @@ req_dir=$1
 name=$2
 box_size=$3
 iteration=$4
+step=$5 # L1,L2 1000000, L3 5000000
+interval_step=$6 # L1,L2 100000, L3 500000
 
 echo $name
 echo $box_size
 
 # シミュレーションする温度のリスト
 # temperatures=(358)
-temperatures=(277 298 308 318 328 338 348 358)
+temperatures=(277 308 328 358)
 # temperatures=(277)
 
 for temperature in "${temperatures[@]}"; do
@@ -162,7 +166,7 @@ for temperature in "${temperatures[@]}"; do
     make_top_conf $seq_name $box_size
     dir_path=$(dirname $seq_name)
     target=$(basename $dir_path)
-    make_input $dir_path $target $temperature
+    make_input $dir_path $target $temperature $step $interval_step
     run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
 
     if [ -e "results/" ]; then
