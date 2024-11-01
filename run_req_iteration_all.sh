@@ -16,5 +16,5 @@ for dir in "$target_dir"/*; do
     file=$(ls $dir)
     echo $file
     # ./run_req_iteration.sh conf/req_L1_1/r1730348086844-61935 r1730348086844-61935.txt 25 1 1000000 100000
-    ./run_req_iteration.sh $dir $file $box_size $iteration $step $iteration_step
+    echo "./run_req_iteration.sh $dir $file $box_size $iteration $step $iteration_step"
 done
