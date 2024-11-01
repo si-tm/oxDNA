@@ -150,8 +150,14 @@ iteration=$4
 step=$5 # L1,L2 1000000, L3 5000000
 interval_step=$6 # L1,L2 100000, L3 500000
 
+echo "conf: "
+echo $req_dir
 echo $name
 echo $box_size
+echo $iteration
+echo $step # L1,L2 1000000, L3 5000000
+echo $interval_step # L1,L2 100000, L3 500000
+echo "conf end"
 
 # シミュレーションする温度のリスト
 # temperatures=(358)
