@@ -147,10 +147,14 @@ req_dir=$1
 name=$2
 box_size=$3
 iteration=$4
-step=$5 # L1,L2 1000000, L3 5000000
-interval_step=$6 # L1,L2 100000, L3 500000
+step=$5 
+# L1,L2 1000000, L3 5000000
+interval_step=$6 
+# L1,L2 100000, L3 500000
 
+echo "Parameters: $1 $2 $3 $4 $5 $6"
 echo "conf: "
+
 echo $req_dir
 echo $name
 echo $box_size
