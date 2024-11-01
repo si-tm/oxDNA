@@ -151,8 +151,6 @@ step=$5
 # L1,L2 1000000, L3 5000000
 interval_step=$6 
 # L1,L2 100000, L3 500000
-
-echo "Parameters: $1 $2 $3 $4 $5 $6"
 echo "conf: "
 
 echo $req_dir
@@ -163,42 +161,42 @@ echo $step # L1,L2 1000000, L3 5000000
 echo $interval_step # L1,L2 100000, L3 500000
 echo "conf end"
 
-# # シミュレーションする温度のリスト
-# # temperatures=(358)
-# temperatures=(277 308 328 358)
-# # temperatures=(277)
+# シミュレーションする温度のリスト
+# temperatures=(358)
+temperatures=(277 308 328 358)
+# temperatures=(277)
 
-# for temperature in "${temperatures[@]}"; do
-#     # for iteration in {1..10}; do
-#     req_name="${req_dir}/${name}_${temperature}_${iteration}/req_${name}_${temperature}_${iteration}.txt"
-#     # req_name="${req_dir}/${name}_${temperature}_${iteration}/req_${name}.txt"
-#     mkdir -p "${req_dir}/${name}_${temperature}_${iteration}"
-#     cp "${req_dir}/req_${name}.txt" $req_name
-#     seq_name=$(make_seq $req_name)
-#     make_top_conf $seq_name $box_size
-#     dir_path=$(dirname $seq_name)
-#     target=$(basename $dir_path)
-#     # make_input $dir_path $target $temperature $step $interval_step
-#     make_input "$dir_path" "$target" "$temperature" "$step" "$interval_step"
+for temperature in "${temperatures[@]}"; do
+    # for iteration in {1..10}; do
+    req_name="${req_dir}/${name}_${temperature}_${iteration}/req_${name}_${temperature}_${iteration}.txt"
+    # req_name="${req_dir}/${name}_${temperature}_${iteration}/req_${name}.txt"
+    mkdir -p "${req_dir}/${name}_${temperature}_${iteration}"
+    cp "${req_dir}/req_${name}.txt" $req_name
+    seq_name=$(make_seq $req_name)
+    make_top_conf $seq_name $box_size
+    dir_path=$(dirname $seq_name)
+    target=$(basename $dir_path)
+    # make_input $dir_path $target $temperature $step $interval_step
+    make_input "$dir_path" "$target" "$temperature" "$step" "$interval_step"
 
-#     run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
+    run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
 
-#     if [ -e "results/" ]; then
-#         echo "results directory exists"
-#     else
-#         mkdir -p "results/"
-#     fi
+    if [ -e "results/" ]; then
+        echo "results directory exists"
+    else
+        mkdir -p "results/"
+    fi
 
-#     if [ -e "results/$dir_path" ]; then
-#         echo "results directory exists"
-#     else
-#         mkdir -p "results/$dir_path"
-#     fi
+    if [ -e "results/$dir_path" ]; then
+        echo "results directory exists"
+    else
+        mkdir -p "results/$dir_path"
+    fi
 
-#     cp -r $dir_path "results/"
-#     rm -rf "results/reqs/"
-#     # done
-# done
+    cp -r $dir_path "results/"
+    rm -rf "results/reqs/"
+    # done
+done
 
-# time_end=$(date +%s)
-# echo "Script execution time: $(($time_end - $time_start)) seconds"
+time_end=$(date +%s)
+echo "Script execution time: $(($time_end - $time_start)) seconds"
