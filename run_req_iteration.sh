@@ -35,6 +35,8 @@ make_input () {
     echo $dir_path
     echo $target
     echo $temperature
+    echo $step
+    echo $interval_step
     echo "wow"
 
     steps=$step
