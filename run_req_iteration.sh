@@ -168,7 +168,9 @@ for temperature in "${temperatures[@]}"; do
     make_top_conf $seq_name $box_size
     dir_path=$(dirname $seq_name)
     target=$(basename $dir_path)
-    make_input $dir_path $target $temperature $step $interval_step
+    # make_input $dir_path $target $temperature $step $interval_step
+    make_input "$dir_path" "$target" "$temperature" "$step" "$interval_step"
+
     run_oxdna $INPUTFILE $SEQDEPFILE $TRAPFILE
 
     if [ -e "results/" ]; then
