@@ -21,6 +21,6 @@ for dir in "$target_dir"/*; do
     name="${name%.txt}"     # 末尾の .txt を削除
     echo $name
     # ./run_req_iteration.sh conf/req_L1_1/r1730373350439-94911 r1730373350439-94911 25 1 10
-    # echo "./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step"
-    ./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step
+    echo "./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step"
+    # ./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step
 done
