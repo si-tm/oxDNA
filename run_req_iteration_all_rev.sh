@@ -13,17 +13,27 @@ iteration_step=$5 # L1,L2 100000, L3 500000
 echo $box_size $iteration $step $iteration_step
 # 25 1 1000000 10000
 
-# ディレクトリ内の全てのファイルに対して処理を実行
-for dir in "$target_dir"/*; do
-    # conf/req_L1_1/r1730290723232-10
+files=("$target_dir"/*)
+for ((i=${#files[@]}-1; i>=0; i--)); do
+    dir="${files[i]}"
     echo $dir
     file=$(ls "$dir" | grep '\.txt$')
-    # r1730290723232-10_277_1 r1730290723232-10_277_1_277_25 r1730290723232-10_277_1_277_r1730290723232-10_277_1_308_25 r1730290723232-10_277_1_308_25 r1730290723232-10_277_1_308_r1730290723232-10_277_1_308_25 req_r1730290723232-10.txt
     echo $file
     name="${file#req_}"     # 先頭の req_ を削除
     name="${name%.txt}"     # 末尾の .txt を削除
-    # r1730290723232-10_277_1 r1730290723232-10_277_1_277_25 r1730290723232-10_277_1_277_r1730290723232-10_277_1_308_25 r1730290723232-10_277_1_308_25 r1730290723232-10_277_1_308_r1730290723232-10_277_1_308_25 req_r1730290723232-10
     echo $name
     echo "./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step"
     ./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step
 done
+
+# ディレクトリ内の全てのファイルに対して処理を実行
+# for dir in "$target_dir"/*; do
+#     echo $dir
+    # file=$(ls "$dir" | grep '\.txt$')
+    # echo $file
+    # name="${file#req_}"     # 先頭の req_ を削除
+    # name="${name%.txt}"     # 末尾の .txt を削除
+    # echo $name
+    # echo "./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step"
+    # ./run_req_iteration.sh $dir $name $box_size $iteration $step $iteration_step
+# done
