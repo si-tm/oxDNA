@@ -153,12 +153,12 @@ interval_step=$6
 # L1,L2 100000, L3 500000
 echo "conf: "
 
-echo $req_dir
-echo $name
-echo $box_size
-echo $iteration
-echo $step # L1,L2 1000000, L3 5000000
-echo $interval_step # L1,L2 100000, L3 500000
+echo $req_dir $1
+echo $name $2
+echo $box_size $3
+echo $iteration $4
+echo $step $5 # L1,L2 1000000, L3 5000000
+echo $interval_step $6 # L1,L2 100000, L3 500000
 echo "conf end"
 
 # シミュレーションする温度のリスト
